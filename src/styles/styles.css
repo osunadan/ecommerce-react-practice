@@ -71,6 +71,7 @@ p {
 img {
   max-width: 100%;
   height: auto;
+  width: 5rem;
 }
 
 /* ========== Custom Classes =========== */
@@ -97,6 +98,41 @@ img {
      align-items: center;
 }
 /* ========== Header =========== */
+.header{
+    margin-bottom: 4rem;
+}
+
+.header .navbar{
+    padding: 2.5rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.header .navbar .row{
+    justify-content: space-between;
+}
+
+.header .navbar .row .nav-list a{
+    display: inline-block;
+    padding: 1rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--black-color);
+}
+
+.header .navbar .row .nav-list a.user-link{
+    display: none;
+}
+
+.header .navbar .row .nav-list a:not(:last-child){
+    margin-right: 0.5rem;
+}
+
+header .navbar .row .nav-list a:hover{
+    color: var(--primary-color)
+}
+
+/* ========== Navbar =========== */
 
 /* ========== Hero Area =========== */
 
