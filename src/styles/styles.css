@@ -102,6 +102,8 @@ img {
     margin-bottom: 4rem;
 }
 
+/* ========== Navbar =========== */
+
 .header .navbar{
     padding: 2.5rem 0;
     position: relative;
@@ -132,7 +134,79 @@ header .navbar .row .nav-list a:hover{
     color: var(--primary-color)
 }
 
-/* ========== Navbar =========== */
+header .navbar .row .icons .icon {
+font-size: 2.2rem;
+padding: 0.5rem;
+color: var(--black-color);
+cursor: pointer;
+justify-content: center;
+position: relative;
+}
+
+header .navbar .row .icons .icon:not(:last-child){
+    margin-right: 3rem;
+}
+
+header .navbar .row .icons .icon:nth-child(3) {
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: var(--black-color);
+}
+
+.header .hamburger, .header .close{
+display: none;
+}
+
+@media (min-width: 1600px) {
+    .header .navbar{
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .navbar .row .icons{
+        display: none;
+    }
+
+    .header .navbar .row .nav-list{
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 35rem;
+        height: 100%;
+        background-color: var(--grey-color);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 4rem 1rem;
+        transition: 0.5s;
+    }
+
+     .header .navbar .row .nav-list a{
+         font-size: 1.8rem;
+     }
+
+     .header .navbar .row .nav-list a:not(:last-child){
+         margin: 0 0 1rem 0;
+     }
+
+      .header .navbar .row .nav-list .close{
+          display: block;
+          position: absolute;
+          top: 2.5rem;
+          right: 2.5rem;
+          color: var(--black-color);
+          cursor: pointer;
+          font-size: 3rem;
+      }
+
+       .header .navbar .row .hamburger{
+           display: block;
+           font-size: 3rem;
+           color: var(--black-color)
+       }
+}
+
 
 /* ========== Hero Area =========== */
 
