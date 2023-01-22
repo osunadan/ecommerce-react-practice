@@ -6,11 +6,12 @@ import CartWidget from '../Checkout/CartWidget';
 import Hamburger from './Hamburger';
 
 const Navbar = () => {
-const [show, setShow] = useState("")
+const [show, setShow] = useState(false)
 
-const handleShow = () => {
-    console.log("funciona")
-    setShow("show")}
+function  handleShow() {
+    console.log("Funciona")
+    setShow(true)
+};
 
   return (
     <nav className='navbar'>
@@ -18,13 +19,13 @@ const handleShow = () => {
             <div className="logo">
                 <img  src="src/assets/Siete.svg" alt="Logo de la empresa" />
             </div>
-            <div className={`nav-list d-flex${show}`}>
+            <div className={`nav-list d-flex ${show ? 'show' : ''}`}>
                 <Link to="/">Home</Link>
                 <Link to="/">Shop</Link>
                 <Link to="/">Pages</Link>
                 <Link to="/">About Us</Link>
                 <Link to="/">Lookups</Link>
-                <div className="close">
+                <div className="close" onClick={()=>{setShow(false)}}>
                     <box-icon name='x'></box-icon>
                 </div>
                 <Link to="/" className="user-link">Login</Link>
@@ -35,7 +36,7 @@ const handleShow = () => {
                 <div className="icon d-flex user-icon"><box-icon name='user-circle'></box-icon></div>
                 <CartWidget/>
             </div>
-            <Hamburger onClick={handleShow}/>
+            <Hamburger type="button" show={handleShow}></Hamburger>
         </div>
     </nav>
   )

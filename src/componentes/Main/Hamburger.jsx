@@ -1,11 +1,11 @@
 import React from 'react'
 import 'boxicons'
 
-function Hamburger() {
+function Hamburger({show}) {
 
   return (
-    <div class="hamburger">
-        <box-icon name='menu'></box-icon>
+    <div type="button" className="hamburger" onClick={show}>
+       <box-icon name='menu'></box-icon>
     </div>
   )
 }

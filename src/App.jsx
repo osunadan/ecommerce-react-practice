@@ -4,11 +4,9 @@ import Header from "./componentes/Main/Header";
 
 function App() {
   return (
-      <>
       <Routes>
           <Route path="/" element={<Header/>} />
       </Routes>
-      </>
 );
 }
 
