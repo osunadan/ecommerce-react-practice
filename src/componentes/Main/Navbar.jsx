@@ -9,7 +9,6 @@ const Navbar = () => {
 const [show, setShow] = useState(false)
 
 function  handleShow() {
-    console.log("Funciona")
     setShow(true)
 };
 

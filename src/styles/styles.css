@@ -6,6 +6,7 @@
 /* ========== CSS Variables =========== */
 :root {
   --primary-color: #ecc042;
+  --secondary-color: #EC6D42;
   --default-color: #4f5665;
   --black-color: #060606;
   --grey-color: #f0f0f0;
@@ -17,8 +18,8 @@
   --lightblue: #ccccff;
   --box-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.1);
   --box-shadow-2: 0 5px 15px rgba(255, 94, 58, 0.2);
-  --gradient: linear-gradient(to bottom, #fccb90, #ff9a9e);
-  --btn-gradient: linear-gradient(to bottom, #ff5151 50%, #ff5e3a);
+  --gradient: linear-gradient(to bottom, #ecc042, #EC6D42);
+  --btn-gradient: linear-gradient(to bottom, #EE7B54 50%, #EC6D42);
 }
 
 *,
@@ -71,7 +72,6 @@ p {
 img {
   max-width: 100%;
   height: auto;
-  width: 5rem;
 }
 
 /* ========== Custom Classes =========== */
@@ -103,6 +103,10 @@ img {
 }
 
 /* ========== Navbar =========== */
+
+.logo{
+    width: 5rem;
+}
 
 .header .navbar{
     padding: 2.5rem 0;
@@ -213,6 +217,74 @@ display: none;
 
 
 /* ========== Hero Area =========== */
+.hero{
+    height: 80vh;
+    margin: 0 3rem;
+}
+
+.header .hero .row{
+   height: 100%;
+   background: url("src/assets/bgHero.svg") center/cover no-repeat fixed;
+   border-radius: 2rem;
+   position: relative;
+}
+
+.header .hero .row .col{
+    margin-left: 5rem;
+}
+
+.header .hero .row .col .subtitle{
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+}
+
+.header .hero .row .col h1{
+    font-family: "Aclonica", sans-serif;
+    font-size: 13rem;
+    line-height: 1;
+}
+
+.header .hero .row .col h1 .i{
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.header .hero .row .col h1 .i::before{
+   content: "ı";
+   position: absolute;
+   color: var(--black-color);
+}
+
+.header .hero .row .col p{
+    font-size: 2rem;
+    margin-bottom: 6rem;
+}
+
+.header .hero .row .col .btn {
+    display: inline-block;
+    padding: 1.5rem 6rem;
+    border-radius: 1rem;
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 1.8rem;
+    background: var(--btn-gradient);
+    cursor: pointer;
+    box-shadow: var(--box-shadow-1);
+}
+
+.header .hero .row img{
+position: absolute;
+right: 0;
+bottom: 0;
+}
+
+@media (max-width:1600px) {
+    .header .hero .row img{
+    width: 65rem;
+    }
+}
+
 
 /* ========== Collection =========== */
 
