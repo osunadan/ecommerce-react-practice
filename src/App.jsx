@@ -1,11 +1,12 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Header from "./componentes/Main/Header";
+import { Route, Routes} from "react-router-dom";
+import HomePage from "./componentes/Main/HomePage";
+
 
 function App() {
   return (
       <Routes>
-          <Route path="/" element={<Header/>} />
+          <Route path="/" element={<HomePage/>} />
       </Routes>
 );
 }
