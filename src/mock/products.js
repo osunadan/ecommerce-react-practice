@@ -1,5 +1,4 @@
-{
-  "products": [
+export const products = [
     {
       "id": 1,
       "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
@@ -112,5 +111,5 @@
       "url": "../assets/product-16.png",
       "category": "Accessories"
     }
-  ]
-}
+]
+
