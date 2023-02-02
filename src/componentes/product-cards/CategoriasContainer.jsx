@@ -19,7 +19,7 @@ useEffect(() => {
 },[])
 
   return (
-      <>
+    <>
     <Categorias categorias={cat}/>
     </>
   )
