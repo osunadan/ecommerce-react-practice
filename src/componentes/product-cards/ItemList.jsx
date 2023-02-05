@@ -1,29 +1,30 @@
-import React from 'react'
+import { React} from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
+import {Navigation, Pagination} from "swiper";
 import 'swiper/css';
 import Item from "./Item";
 
-SwiperCore.use([Navigation, Pagination]);
+
 
 function ItemList({productos}) {
-  
+
     return (
       <div className="products container">
-      <Swiper id="mySwiper"
-        spaceBetween={100}
-        slidesPerView={3}
-        navigation
-        pagination >
+      <Swiper id="main"
+            modules={[Navigation, Pagination]}
+            spaceBetween={100}
+            slidesPerView={3}
+            navigation
+            pagination>
+        
         {productos.map((prod)=>{
           return(
           <SwiperSlide key={`${prod.id}`}>
-              <Item/>
-          </SwiperSlide>
-      )
-      })}
+              <Item image={prod.url} title={prod.title} price={prod.price}/>
+          </SwiperSlide>)})}
+
       </Swiper>
-      </div>
+      </div>  
   )
 }
 

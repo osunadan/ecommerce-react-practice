@@ -401,6 +401,10 @@ bottom: 0;
     box-shadow: var(--box-shadow-2);
 }
 
+.products .swiper .swiper-wrapper .swiper-slide .product img{
+    max-width: 35rem;
+}
+
 
 /* ========== Arrivals =========== */
 
