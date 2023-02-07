@@ -7,7 +7,7 @@ function Item({image, title, price}) {
         <div className="top d-flex">
             <img src={image} alt="Producto 1" />
             <div className="icon d-flex">
-                <box-icon type='solid' name='heart'></box-icon>
+                <p>Add to cart</p>
             </div>
         </div>
         <div className="bottom" >
@@ -15,11 +15,11 @@ function Item({image, title, price}) {
             <div className="d-flex">
                 <div className="price">${price}</div>
                 <div className="rating">
-                    <box-icon name='star' type='solid' ></box-icon>
-                    <box-icon name='star' type='solid' ></box-icon>
-                    <box-icon name='star' type='solid' ></box-icon>
-                    <box-icon name='star' type='solid' ></box-icon>
-                    <box-icon name='star' type='solid' ></box-icon>
+                    <box-icon name='star' type='solid' color="#ecc042"></box-icon>
+                    <box-icon name='star' type='solid' color="#ecc042"></box-icon>
+                    <box-icon name='star' type='solid' color="#ecc042"></box-icon>
+                    <box-icon name='star' type='solid' color="#ecc042"></box-icon>
+                    <box-icon name='star' type='solid' color="#ecc042"></box-icon>
                 </div>
             </div>
         </div>

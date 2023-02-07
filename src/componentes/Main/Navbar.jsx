@@ -31,7 +31,7 @@ function  handleShow() {
             </div>
 
             <div className="icons d-flex"> 
-                <div className="icon d-flex"><box-icon name='search'></box-icon></div>
+                <div className="icon d-flex"><box-icon name='search' ></box-icon></div>
                 <div className="icon d-flex user-icon"><box-icon name='user-circle'></box-icon></div>
                 <CartWidget/>
             </div>

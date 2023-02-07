@@ -12,10 +12,22 @@ function ItemList({productos}) {
       <div className="products container">
       <Swiper id="main"
             modules={[Navigation, Pagination]}
-            spaceBetween={100}
-            slidesPerView={3}
+            spaceBetween={70}
+            slidesPerView={1}
             navigation
-            pagination>
+            pagination={{ clickable: true }}
+            breakpoints={{
+                0: {
+                    slidesPerView: 1
+                },
+                567: {
+                    slidesPerView:2
+                },
+                996: {
+                    slidesPerView:3
+                }
+            }
+        }>
         
         {productos.map((prod)=>{
           return(
