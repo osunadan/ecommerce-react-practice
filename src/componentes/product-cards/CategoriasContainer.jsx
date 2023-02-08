@@ -1,13 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from "react";
-import { products } from "../../mock/products";
 import Categorias from './Categorias';
+import useProducts from '../../customHooks/useProducts';
 
 function CategoriasContainer() {
 const [cat, setCat] = useState([]);
+const productos = useProducts();
 
 useEffect(() => {
-    const categorias = products.map((prod) => {
+    const categorias = productos.map((prod) => {
 				return prod.category;
 			});
 

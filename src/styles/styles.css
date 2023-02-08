@@ -489,6 +489,43 @@ width: 3rem;
 border-radius: 1.5rem;
 }
 
+@media (min-width: 1600px){
+.collection .products .product .top{
+   height: 35rem;
+}
+}
+
+@media (max-width: 768px){
+    .collection .filters{
+        margin-bottom: 7rem;
+    }
+
+    .collection .filters a {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.6rem;
+    }
+
+    .collection .filters a:not(:last-child){
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 567px){
+    .collection .filters{
+        flex-wrap: wrap;
+    }
+
+      .collection .filters a{
+          padding: 0.7rem 1rem;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+      }
+    
+      .collection .filters a:not(:last-child){
+          margin-right: 1rem;
+      }
+}
+
 /* ========== Arrivals =========== */
 
 /* ========== Categories Product =========== */
