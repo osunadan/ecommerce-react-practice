@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export default function useProducts() {
-const [productos, setProductos] = useState({});
+const [productos, setProductos] = useState([]);
 
 const getProducts = async () => {
   try {

@@ -1,18 +1,19 @@
-import React from 'react'
+import { useState, useEffect } from "react";
 import CategoriasContainer from './CategoriasContainer'
 import ItemList from './ItemList'
 import TitleProductCards from './TitleProductCards';
-import { products } from "../../mock/products";
-import {useState} from 'react';
+import useProducts from '../../customHooks/useProducts';
 
 function ItemListContainer() {
-const [productos, setProductos] = useState(products);
+const productos = useProducts();
+
+const productosOferta = productos.filter((prod) => prod.oferta === "true");
 
   return (
    <section className='section collection'>
     <TitleProductCards/>
     <CategoriasContainer/>
-    <ItemList productos={productos}/>
+    <ItemList productos={productos} productosOferta={productosOferta}/>
     </section>
   )
 }

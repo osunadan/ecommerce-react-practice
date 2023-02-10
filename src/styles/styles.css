@@ -405,11 +405,42 @@ bottom: 0;
 padding: 0 0 3.3rem;
 }
 
+/* ========== Product Cards =========== */
+
 .collection .products .product{
     border-radius: 2.5rem;
     box-shadow: var(--box-shadow-1);
+    width: 30rem;
+    margin: 2rem 2rem;
     overflow: hidden;
 }
+
+.collection .products .d-flex{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* ========== Product Cards En Oferta=========== */
+
+.collection .products .product.sale {
+    display: flex;
+    flex-direction: row;
+    width: 35rem;
+    height: 20rem;
+    margin: 2rem 2rem;
+}
+
+.collection .products .product.sale .top{
+    background: var(--secondary-color);
+    height: 15rem;
+    width: 22rem;
+}
+
+.collection .products .product.sale .top img{
+    height: 10rem;
+}
+
+/* ========== Product Cards Sin Oferta =========== */
 
 .collection .products .product .top{
     background: var(--gradient);

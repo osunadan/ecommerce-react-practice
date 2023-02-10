@@ -17,7 +17,8 @@ useEffect(() => {
 
     const categoríasSinDuplicados = removeDuplicates(categorias);
 			setCat(categoríasSinDuplicados);
-},[])
+},[productos])
+
 
   return (
     <>

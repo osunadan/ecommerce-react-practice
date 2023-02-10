@@ -5,8 +5,7 @@ import 'swiper/css';
 import Item from "./Item";
 
 
-
-function ItemList({productos}) {
+function ItemList({productos, productosOferta}) {
 
     return (
       <div className="products container">
@@ -24,19 +23,26 @@ function ItemList({productos}) {
                     slidesPerView:2
                 },
                 996: {
+                    spaceBetween:30,
                     slidesPerView:3
                 }
             }
         }>
         
-        {productos.map((prod)=>{
+        {productosOferta.map((prod)=>{
           return(
           <SwiperSlide key={`${prod.id}`}>
-              <Item image={prod.url} title={prod.title} price={prod.price}/>
+              <Item image={prod.url} title={prod.title} price={prod.price} oferta={"sale"}/>
           </SwiperSlide>)})}
 
       </Swiper>
-      </div>  
+<div className="container d-flex">
+        {productos.map((prod)=>{
+            return(
+                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}/>
+            )
+        })}</div>
+    </div>
   )
 }
 

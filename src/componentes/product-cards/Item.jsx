@@ -1,9 +1,9 @@
 import React from 'react'
 import 'boxicons'
 
-function Item({image, title, price}) {
+function Item({image, title, price, oferta}) {
   return (
-    <div className="product" >
+    <div className={`product ${oferta}`} >
         <div className="top d-flex">
             <img src={image} alt="Producto 1" />
             <div className="icon d-flex">
