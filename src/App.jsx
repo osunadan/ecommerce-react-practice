@@ -1,13 +1,18 @@
 import React from "react";
 import { Route, Routes} from "react-router-dom";
-import HomePage from "./componentes/Main/HomePage";
+import Header from "./componentes/Main/Header";
+import ItemListContainer from "./componentes/product-cards/ItemListContainer";
 
 
 function App() {
   return (
+      <>
+      <Header/>
       <Routes>
-          <Route path="/" element={<HomePage/>} />
+          <Route path="/" element={<ItemListContainer/>} />
+          <Route path="/category/:categoryName" element={<ItemListContainer/>} />
       </Routes>
+      </>
 );
 }
 

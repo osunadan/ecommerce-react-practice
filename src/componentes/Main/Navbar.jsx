@@ -16,7 +16,9 @@ function  handleShow() {
     <nav className='navbar'>
         <div className='row container d-flex'>
             <div className="logo">
+                <Link to={"/"}>
                 <img  src="src/assets/Siete.svg" alt="Logo de la empresa" />
+                </Link>
             </div>
             <div className={`nav-list d-flex ${show ? 'show' : ''}`}>
                 <Link to="/">Home</Link>

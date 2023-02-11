@@ -1,10 +1,10 @@
-import React from 'react'
+import {React, useState} from 'react'
 
-function TitleProductCards() {
-  return (
+function TitleProductCards({ OnTop }) {
+return (
         <div className="title">
-            <span>COLLECTION</span>
-            <h2>Out Top Collection</h2>
+            <span className={`${OnTop ? "" : "hidden"}`}>COLLECTION</span>
+            <h2>{OnTop ? "Our Top Collection" : "Oferta Flash - 24h"}</h2>
         </div>
   )
 }

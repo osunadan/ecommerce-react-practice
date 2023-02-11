@@ -3,12 +3,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {Navigation, Pagination} from "swiper";
 import 'swiper/css';
 import Item from "./Item";
+import TitleProductCards from './TitleProductCards';
 
 
 function ItemList({productos, productosOferta}) {
 
     return (
       <div className="products container">
+<div className="container d-flex">
+        {productos.map((prod)=>{
+            return(
+                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}/>
+            )
+        })}</div>
+        <TitleProductCards OnTop={false}/>
       <Swiper id="main"
             modules={[Navigation, Pagination]}
             spaceBetween={70}
@@ -23,7 +31,7 @@ function ItemList({productos, productosOferta}) {
                     slidesPerView:2
                 },
                 996: {
-                    spaceBetween:30,
+                    spaceBetween:10,
                     slidesPerView:3
                 }
             }
@@ -36,12 +44,6 @@ function ItemList({productos, productosOferta}) {
           </SwiperSlide>)})}
 
       </Swiper>
-<div className="container d-flex">
-        {productos.map((prod)=>{
-            return(
-                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}/>
-            )
-        })}</div>
     </div>
   )
 }

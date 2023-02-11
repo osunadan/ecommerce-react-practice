@@ -18,24 +18,24 @@
     },
     {
       "id": 3,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "90",
+      "title": "Apple Watch Series 8 - Gray light",
+      "price": "500",
       "url": "src/assets/product-3.png",
       "category": "Jewellery",
       "oferta": "true"
     },
     {
       "id": 4,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "100",
+      "title": "Pixiebite Sunglasses - Black&Yellow",
+      "price": "10",
       "url": "src/assets/product-4.png",
       "category": "Jewellery",
       "oferta": "true"
     },
     {
       "id": 5,
-      "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
-      "price": "100",
+      "title": "Flowers t-shirt",
+      "price": "5",
       "url": "src/assets/product-5.png",
       "category": "Dresses",
        "oferta": "false"
