@@ -101,6 +101,10 @@ img {
 .hidden{
    visibility: hidden;
 }
+
+.show{
+    visibility: visible;
+}
 /* ========== Header =========== */
 .header{
     margin-bottom: 4rem;
@@ -228,7 +232,7 @@ display: none;
 
 .header .hero .row{
    height: 100%;
-   background: url("src/assets/bgHero.svg") center/cover no-repeat fixed;
+   background: url("../../src/assets/bgHero.svg") center/cover no-repeat fixed;
    border-radius: 2rem;
    position: relative;
 }

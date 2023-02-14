@@ -4,7 +4,7 @@
       "id": 1,
       "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
       "price": "130",
-      "url": "src/assets/product-1.png",
+      "url": "../../src/assets/product-1.png",
       "category": "Dresses",
       "oferta": "true"
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "title": "Armani Frok Ladies -  Imported Fork Blue",
       "price": "210",
-      "url": "src/assets/product-2.png",
+      "url": "../../src/assets/product-2.png",
       "category": "Dresses",
       "oferta": "true"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "title": "Apple Watch Series 8 - Gray light",
       "price": "500",
-      "url": "src/assets/product-3.png",
+      "url": "../../src/assets/product-3.png",
       "category": "Jewellery",
       "oferta": "true"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "title": "Pixiebite Sunglasses - Black&Yellow",
       "price": "10",
-      "url": "src/assets/product-4.png",
+      "url": "../../src/assets/product-4.png",
       "category": "Jewellery",
       "oferta": "true"
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "title": "Flowers t-shirt",
       "price": "5",
-      "url": "src/assets/product-5.png",
+      "url": "../../src/assets/product-5.png",
       "category": "Dresses",
        "oferta": "false"
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
       "price": "50",
-      "url": "src/assets/product-6.png",
+      "url": "../../src/assets/product-6.png",
       "category": "Accessories",
        "oferta": "false"
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
       "price": "50",
-      "url": "src/assets/product-7.png",
+      "url": "../../src/assets/product-7.png",
       "category": "Footwear",
        "oferta": "false"
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
       "price": "300",
-      "url": "src/assets/product-8.png",
+      "url": "../../src/assets/product-8.png",
       "category": "Footwear",
        "oferta": "false"
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
       "price": "300",
-      "url": "src/assets/product-9.png",
+      "url": "../../src/assets/product-9.png",
       "category": "Footwear",
        "oferta": "false"
     },
@@ -76,7 +76,7 @@
       "id": 10,
       "title": "ROG Headphone - Model 25",
       "price": "300",
-      "url": "src/assets/product-10.png",
+      "url": "../../src/assets/product-10.png",
       "category": "Accessories",
        "oferta": "false"
     },
@@ -84,7 +84,7 @@
       "id": 11,
       "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
       "price": "700",
-      "url": "src/assets/product-11.png",
+      "url": "../../src/assets/product-11.png",
       "category": "Accessories",
        "oferta": "false"
     },
@@ -92,7 +92,7 @@
       "id": 12,
       "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
       "price": "500",
-      "url": "src/assets/product-12.png",
+      "url": "../../src/assets/product-12.png",
       "category": "Accessories",
        "oferta": "false"
     },
@@ -100,7 +100,7 @@
       "id": 13,
       "title": "Nike Air Men’s Hoodie -  Imported Hoodie Red",
       "price": "900",
-      "url": "src/assets/product-13.png",
+      "url": "../../src/assets/product-13.png",
       "category": "Accessories",
        "oferta": "false"
     },
@@ -108,7 +108,7 @@
       "id": 14,
       "title": "ROG Headphone - Model 25",
       "price": "100",
-      "url": "src/assets/product-14.png",
+      "url": "../../src/assets/product-14.png",
       "category": "Accessories",
        "oferta": "false"
     },
@@ -116,7 +116,7 @@
       "id": 15,
       "title": "ROG Headphone - Model 25",
       "price": "250",
-      "url": "src/assets/product-15.png",
+      "url": "../../src/assets/product-15.png",
       "category": "Accessories",
        "oferta": "false"
     },
@@ -124,7 +124,7 @@
       "id": 16,
       "title": "ROG Headphone - Model 25",
       "price": "350",
-      "url": "src/assets/product-16.png",
+      "url": "../../src/assets/product-16.png",
       "category": "Accessories",
        "oferta": "false"
     }

@@ -10,7 +10,7 @@ function Hero() {
                 <p>LOOK YOUR BEST ON YOUR BEST DAY</p>
                 <button className="btn">Explore Now</button>
             </div>
-            <img src="src/assets/woman-in-cart.png" alt="Woman in cart" />
+            <img src="../../src/assets/woman-in-cart.png" alt="Woman in cart" />
         </div>
     </div>
   )

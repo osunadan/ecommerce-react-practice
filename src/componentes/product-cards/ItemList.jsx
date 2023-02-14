@@ -16,7 +16,7 @@ function ItemList({productos, productosOferta}) {
                 <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}/>
             )
         })}</div>
-        <TitleProductCards OnTop={false}/>
+        <TitleProductCards OnProducts={false}/>
       <Swiper id="main"
             modules={[Navigation, Pagination]}
             spaceBetween={70}

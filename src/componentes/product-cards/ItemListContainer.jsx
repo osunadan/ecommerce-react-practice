@@ -11,7 +11,7 @@ const productosOferta = productos.filter((prod) => prod.oferta === "true");
 
   return (
    <section className='section collection'>
-    <TitleProductCards OnTop={true}/>
+    <TitleProductCards OnProducts={true}/>
     <CategoriasContainer/>
     <ItemList productos={productos} productosOferta={productosOferta}/>
     </section>

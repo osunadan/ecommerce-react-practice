@@ -1,10 +1,10 @@
 import {React, useState} from 'react'
 
-function TitleProductCards({ OnTop }) {
+function TitleProductCards({ OnProducts, section }) {
 return (
         <div className="title">
-            <span className={`${OnTop ? "" : "hidden"}`}>COLLECTION</span>
-            <h2>{OnTop ? "Our Top Collection" : "Oferta Flash - 24h"}</h2>
+            <span className={`${OnProducts ? "show" : "hidden"}`}>{section === 2 ? "New Arrival" : "COLLECTION"}</span>
+            <h2>{OnProducts ? "Our Top Collection" : "Oferta Flash - 24h"}</h2>
         </div>
   )
 }
