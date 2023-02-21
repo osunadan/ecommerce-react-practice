@@ -11,7 +11,8 @@ const getProducts = async (categoryName) => {
     const productosFiltrados = products.filter((prod)=> prod.category === categoryName)
     if(categoryName){
     return setProductos(productosFiltrados);
-    }else{return setProductos(products)}
+    }else{
+    return setProductos(products)}
   } catch (err) {
     console.log(err);
   }

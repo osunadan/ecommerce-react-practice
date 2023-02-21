@@ -403,8 +403,14 @@ bottom: 0;
     margin-right: 4rem;
 }
 
-.collection .filters a:hover, .collection .filters a:active {
+.collection .filters a:hover{
     background: var(--gradient);
+    color: var(--white-color);
+    box-shadow: var(--box-shadow-2);
+}
+
+.collection .filters a.active {
+    background: var(--primary-color);
     color: var(--white-color);
     box-shadow: var(--box-shadow-2);
 }

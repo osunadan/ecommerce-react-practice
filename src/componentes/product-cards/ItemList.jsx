@@ -25,13 +25,15 @@ function ItemList({productos, productosOferta}) {
             pagination={{ clickable: true }}
             breakpoints={{
                 0: {
+                    spaceBetween:1,
                     slidesPerView: 1
                 },
                 567: {
+                    spaceBetween:1,
                     slidesPerView:2
                 },
                 996: {
-                    spaceBetween:10,
+                    spaceBetween:1,
                     slidesPerView:3
                 }
             }
