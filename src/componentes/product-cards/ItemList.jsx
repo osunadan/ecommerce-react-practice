@@ -16,6 +16,11 @@ function ItemList({productos, productosOferta}) {
                 <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}/>
             )
         })}</div>
+
+<div class="button d-flex">
+        <a class="btn loadmore">Load More</a>
+      </div>
+
         <TitleProductCards OnProducts={false}/>
       <Swiper id="main"
             modules={[Navigation, Pagination]}
@@ -46,6 +51,7 @@ function ItemList({productos, productosOferta}) {
           </SwiperSlide>)})}
 
       </Swiper>
+      
     </div>
   )
 }

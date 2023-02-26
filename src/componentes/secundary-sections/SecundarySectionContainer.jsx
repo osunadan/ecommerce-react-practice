@@ -3,12 +3,29 @@ import SegundarySection from "./SecundarySection"
 
 function SecundarySectionContainer() {
 
-    const columna = ["col-1", "col-2", "col-3", "col-4"]
+    const columna = [
+    {
+        image: "../../../src/assets/poster-1.png",
+        class: "col-1",
+        title: "2021 Trends Women’s Smart Skirt"
+    }, 
+    {
+        image: "../../../src/assets/poster-2.png",
+        class: "col-2",
+        title: "2021 Trends Women’s Smart Skirt"
+    }, 
+    {
+        image: "../../../src/assets/poster-3.png",
+        class: "col-3",
+        title: "2021 Trends Women’s Smart Skirt"
+    }
+]
 
+    
   return (
     <div className='row container'>
-        {columna.map((clase) => {
-            return (<SegundarySection clase={clase} />)})}
+        {columna.map((obj, index) => {
+            return (<SegundarySection obj={obj} posicion={index}/>)})}
     </div>
   )
 }

@@ -1,10 +1,12 @@
 import React from 'react'
 
-function SecundarySection({clase}) {
+function SecundarySection({obj, posicion}) {
   return (
-    <div className={`col ${clase}`}>
-        <img src="" alt="" />
-        <h3></h3>
+    <div className={`col ${obj.class}`}>
+        <img src={`${obj.image}`} alt="" />
+        <h3>{obj.title}
+         {posicion === 2 ? <span>Discover More:</span> : ""}
+        </h3>
     </div>
   )
 }
