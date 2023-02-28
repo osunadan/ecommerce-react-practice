@@ -25,7 +25,7 @@ function SecundarySectionContainer() {
   return (
     <div className='row container'>
         {columna.map((obj, index) => {
-            return (<SegundarySection obj={obj} posicion={index}/>)})}
+            return (<SegundarySection key={obj.class} obj={obj} posicion={index}/>)})}
     </div>
   )
 }
