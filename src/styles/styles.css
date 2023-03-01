@@ -360,7 +360,7 @@ bottom: 0;
 /* ========== Collection =========== */
 .section .title{
     text-align: center;
-    margin-bottom: 5rem;
+    margin: 5rem 0;
 } 
 
 .section .title span{
@@ -679,10 +679,65 @@ padding: 1rem;
     }
 }
 
+/* ========== highlights=========== */
 
-/* ========== Categories Product =========== */
+.highlights{
+    padding: 10rem 0 10rem;
+    background: linear-gradient(
+        to bottom,
+        rgba(252, 203, 144, 0.15),
+        rgba(255,185,188,0.1)
+    );
+}
 
-/* ========== Statistics =========== */
+.highlights .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.highlights .row .col {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.highlights .row .col .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow-1);
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 6rem;
+}
+
+.highlights .row .col .icon:hover {
+    box-shadow: var(--box-shadow-2);
+}
+
+.highlights .row .col h3 {
+    margin-bottom: 1.2rem;
+}
+
+.highlights .row .col p {
+    color: var(--default-color);
+}
+
+@media (max-width: 768px){
+.highlights .row .col p {
+    width: 80%;
+    margin: 0 auto;
+}    
+}
+
+@media (min-width: 1560px){
+.highlights .row {
+    grid-template-columns: repeat(4, 1fr);
+}    
+}
 
 /* ========== Blog =========== */
 

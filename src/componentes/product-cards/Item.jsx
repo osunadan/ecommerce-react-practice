@@ -1,8 +1,25 @@
-import React from 'react'
-import 'boxicons'
+import {React, useState} from 'react';
+import 'boxicons';
 
-function Item({image, title, price, oferta}) {
-  return (
+function Item({image, title, price, oferta, blog, description, date}) {
+  const [showBlog, setShowBlog] = useState(blog)
+  
+if(showBlog){
+    return(
+        <div className="col">
+            <div className="top">
+                <img src={image} alt="" />
+            </div>
+            <div className="bottom">
+                <h3>{title}</h3>
+                <h4>{description}</h4>
+                <span>{date}</span>
+            </div>
+        </div>
+    )
+}
+
+    return (
     <div className={`product ${oferta}`} >
         <div className="top d-flex">
             <img src={image} alt="Producto 1" />

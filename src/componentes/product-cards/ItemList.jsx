@@ -11,7 +11,7 @@ const [productosPorPartes, setProductosPorPartes] = useState([]);
 const [mostrarTodo, setMostrarTodo] = useState(false);
 
 useEffect(() => {
-    setProductosPorPartes(productos.filter((_, index) => index < 8));
+    setProductosPorPartes(productos.filter((_, index) => index < 4));
   }, [productos]);
 
 console.log(productosPorPartes)
@@ -43,7 +43,7 @@ const loadData = (e) =>{
         <button className="btn loadmore" onClick={(e)=> loadData(e)}>Load More</button>
       </div>
 
-        <TitleProductCards OnProducts={false}/>
+        <TitleProductCards title={"OFERTAS"} subTitle={"24h"}/>
       <Swiper id="main"
             modules={[Navigation, Pagination]}
             spaceBetween={70}

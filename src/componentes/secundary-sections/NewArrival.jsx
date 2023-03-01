@@ -5,7 +5,7 @@ import SecundarySectionContainer from "./SecundarySectionContainer"
 function NewArrival() {
   return (
     <section className="section new-arrival">
-    <TitleProductCards OnProducts={true} section={2}/>
+    <TitleProductCards title={"New Arrival"} subTitle={"Latest Collection"}/>
     <SecundarySectionContainer/>
     </section>
   )
