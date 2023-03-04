@@ -5,6 +5,7 @@ import HighlightsContainer from "./componentes/highlights-section/HighlightsCont
 import Header from "./componentes/Main/Header";
 import ItemListContainer from "./componentes/product-cards/ItemListContainer";
 import NewArrival from "./componentes/secundary-sections/NewArrival";
+import FooterContainer from "./componentes/footer/FooterContainer"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <NewArrival/>
       <HighlightsContainer/>
       <BlogContainer/>
+      <FooterContainer/>
       </>
 );
 }
