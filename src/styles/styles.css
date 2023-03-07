@@ -235,6 +235,7 @@ display: none;
    background: url("../../src/assets/bgHero.svg") center/cover no-repeat fixed;
    border-radius: 2rem;
    position: relative;
+   overflow: hidden;
 }
 
 .header .hero .row .col{
@@ -283,18 +284,30 @@ display: none;
 
 .header .hero .row img{
 position: absolute;
-right: 0;
-bottom: 0;
+right: -35px;
+bottom: -35px;
+object-fit: cover;
+width: 50%;
 }
 
-@media (max-width:1600px) {
-    .header .hero .row img{
-    width: 65rem;
-    }
+@media (min-width:1500px) {
+   .header .hero .row img{
+    width: 48%;
+}
 }
 
-@media (max-width:1200px) {
-   .header .hero .row .col h1{
+@media (max-width:1440px) {
+   .header .hero .row img{
+    width: 60%;
+}
+}
+
+@media (max-width:1024px) {
+   .hero{
+       height: 70vh;
+   }
+   
+    .header .hero .row .col h1{
     font-size: 8rem;
 }
 }
@@ -330,7 +343,7 @@ bottom: 0;
 @media (max-width: 567px ) {
 
     .header .hero{
-        height: 100vh;
+        height: 90vh;
         margin: 0 1rem;
     }
 
@@ -344,16 +357,17 @@ bottom: 0;
 }
 
 .header .hero .row .col p{
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
 }
 
 .header .hero .row .col .btn {
-    padding: 1.2rem 3.5rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
 }
 
  .header .hero .row img{
-    width: 35rem;
+    width: 100%;
     }
 }
 
@@ -521,7 +535,7 @@ width: 90%;
     right: 2rem;
     border-radius: 1rem;
     padding: 0.5rem 1.5rem;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     justify-content: center;
     cursor: pointer;
     opacity: 0;
@@ -848,6 +862,37 @@ font-size: 1.7rem;
 padding: 0.5rem;
 margin-bottom: 1rem;
 color: var(--default-color);
+}
+
+.footer .row .col:last-child .contact div{
+    flex-direction: row;
+}
+
+.footer .row .col:last-child .contact span{
+flex: 1;
+}
+
+.footer .row .col:last-child h4{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 1200px){
+    .footer .row .col:first-child {
+        display: none;
+    }
+
+    .footer .row {
+        display: block;
+    }
+}
+
+@media (max-width: 768px){
+    .footer .row .col:last-child {
+grid-template-columns: 1fr;
+gap: 3rem 0;
+    }
 }
 
 /* ========== User Form =========== */

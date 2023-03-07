@@ -10,14 +10,13 @@ export default function FooterContainer() {
                 <div className="logo d-flex">
                     <img src="../../src/assets/Siete.svg" alt="" />
                 </div>
-                <p>Lorem ispum is a placeholder text commonly used as a free text.</p>
+                <p>Lorem ispum is a placeholder text <br /> commonly used as a free text.</p>
                 <div className="icons d-flex">
                     <FooterIcon icon={<box-icon type='logo' name='twitter' color={"#f7f7f7"}></box-icon>}/>
                     <FooterIcon icon={<box-icon name='youtube' type='logo'  color={"#f7f7f7"}></box-icon>}/>
                     <FooterIcon icon={<box-icon name='instagram' type='logo'  color={"#f7f7f7"}></box-icon>}/>
                 </div>
-                <p className="colors">
-                    Copyrights 2021 <br/>
+                <p> Copyrights 2021 <br/>
                     @osuna_dan
                 </p>
             </div>

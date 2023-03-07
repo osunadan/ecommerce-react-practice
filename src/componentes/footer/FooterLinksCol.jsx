@@ -6,17 +6,17 @@ export default function FooterLinksCol({contact, title, enlace1, enlace2, enlace
   
  if(contact){
    return(
-       <div>
+       <div className='contact'>
             <h4>{title}</h4>
-    <div className="d-flex">
+    <div>
         <FooterIcon icon={<box-icon name='map-pin' type='solid' color={"#f7f7f7"}></box-icon>} />
         <span>{enlace1}</span>
     </div>
-    <div className="d-flex">
+    <div>
         <FooterIcon icon={<box-icon name='envelope' color={"#f7f7f7"}></box-icon>} />
         <span>{enlace2}</span>
     </div>
-    <div className="d-flex">
+    <div>
         <FooterIcon icon={<box-icon name='phone' type='solid' color={"#f7f7f7"}></box-icon>} />
         <span>{enlace3}</span>
     </div>
