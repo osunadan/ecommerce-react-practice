@@ -11,11 +11,6 @@
   --black-color: #060606;
   --grey-color: #f0f0f0;
   --white-color: #f7f7f7;
-  --lightpink: #ffcce0;
-  --blue: #1a1aff;
-  --custom: #1a1aff;
-  --color: #4d4d4d;
-  --lightblue: #ccccff;
   --box-shadow-1: 0 5px 15px rgba(0, 0, 0, 0.1);
   --box-shadow-2: 0 5px 15px rgba(255, 94, 58, 0.2);
   --gradient: linear-gradient(to bottom, rgba(236,192,66,0.6), rgba(236,109,66,0.6));
@@ -116,17 +111,17 @@ img {
     width: 5rem;
 }
 
-.header .navbar{
+ .navbar{
     padding: 2.5rem 0;
     position: relative;
     z-index: 1;
 }
 
-.header .navbar .row{
+ .navbar .row{
     justify-content: space-between;
 }
 
-.header .navbar .row .nav-list a{
+ .navbar .row .nav-list a{
     display: inline-block;
     padding: 1rem;
     font-size: 1.7rem;
@@ -134,19 +129,19 @@ img {
     color: var(--black-color);
 }
 
-.header .navbar .row .nav-list a.user-link{
+ .navbar .row .nav-list a.user-link{
     display: none;
 }
 
-.header .navbar .row .nav-list a:not(:last-child){
+ .navbar .row .nav-list a:not(:last-child){
     margin-right: 0.5rem;
 }
 
-header .navbar .row .nav-list a:hover{
+ .navbar .row .nav-list a:hover{
     color: var(--primary-color)
 }
 
-header .navbar .row .icons .icon {
+ .navbar .row .icons .icon {
 font-size: 2.2rem;
 padding: 0.5rem;
 color: var(--black-color);
@@ -155,32 +150,32 @@ justify-content: center;
 position: relative;
 }
 
-header .navbar .row .icons .icon:not(:last-child){
+ .navbar .row .icons .icon:not(:last-child){
     margin-right: 3rem;
 }
 
-header .navbar .row .icons .icon:nth-child(3) {
+ .navbar .row .icons .icon:nth-child(3) {
     background-color: var(--primary-color);
     border-radius: 8px;
     color: var(--black-color);
 }
 
-.header .hamburger, .header .close{
+ .hamburger,  .close{
 display: none;
 }
 
 @media (min-width: 1600px) {
-    .header .navbar{
+     .navbar{
         padding: 4rem 0;
     }
 }
 
 @media (max-width: 768px) {
-    .header .navbar .row .icons{
+     .navbar .row .icons{
         display: none;
     }
 
-    .header .navbar .row .nav-list{
+     .navbar .row .nav-list{
         position: fixed;
         top: 0;
         right: -100%;
@@ -194,15 +189,15 @@ display: none;
         transition: 0.5s;
     }
 
-     .header .navbar .row .nav-list a{
+      .navbar .row .nav-list a{
          font-size: 1.8rem;
      }
 
-     .header .navbar .row .nav-list a:not(:last-child){
+      .navbar .row .nav-list a:not(:last-child){
          margin: 0 0 1rem 0;
      }
 
-      .header .navbar .row .nav-list .close{
+       .navbar .row .nav-list .close{
           display: block;
           position: absolute;
           top: 2.5rem;
@@ -212,11 +207,11 @@ display: none;
           font-size: 3rem;
       }
 
-        .header .navbar .row .nav-list.show{
+         .navbar .row .nav-list.show{
             right: 0;
         }
 
-       .header .navbar .row .hamburger{
+        .navbar .row .hamburger{
            display: block;
            font-size: 3rem;
            cursor: pointer;

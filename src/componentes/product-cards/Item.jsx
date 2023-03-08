@@ -1,7 +1,8 @@
 import {React, useState} from 'react';
 import 'boxicons';
+import { Link } from "react-router-dom";
 
-function Item({image, title, price, oferta, blog, description, date}) {
+function Item({image, title, price, oferta, blog, description, date, key}) {
   const [showBlog, setShowBlog] = useState(blog)
   
 if(showBlog){
@@ -21,6 +22,7 @@ if(showBlog){
 
     return (
     <div className={`product ${oferta}`} >
+        <Link to={`/detail/${key}`}>
         <div className="top d-flex">
             <img src={image} alt="Producto 1" />
             <div className="icon d-flex">
@@ -40,6 +42,7 @@ if(showBlog){
                 </div>
             </div>
         </div>
+        </Link>
     </div>
   )
 }
