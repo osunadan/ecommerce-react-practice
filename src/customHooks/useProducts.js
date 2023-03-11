@@ -10,9 +10,9 @@ const getProducts = async (categoryName) => {
     const products = data.products;
     const productosFiltrados = products.filter((prod)=> prod.category === categoryName)
     if(categoryName){
-    return setProductos(productosFiltrados);
+    setProductos(productosFiltrados);
     }else{
-    return setProductos(products)}
+    setProductos(products)}
   } catch (err) {
     console.log(err);
   }

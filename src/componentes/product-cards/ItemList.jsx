@@ -30,11 +30,11 @@ const loadData = (e) =>{
 <div className="container d-flex">
         {mostrarTodo ? productos.map((prod)=>{
             return(
-                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}/>
+                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
             ) 
         }) : productosPorPartes.map((prod)=>{
             return(
-                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}/>
+                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}  id={prod.id}/>
             ) 
         }) }
 </div>
