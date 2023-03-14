@@ -5,6 +5,7 @@ import ItemListContainer from "../product-cards/ItemListContainer";
 import NewArrival from "../secundary-sections/NewArrival";
 import HighlightsContainer from "../highlights-section/HighlightsContainer";
 import BlogContainer from "../blog/BlogContainer";
+import PopUp from './PopUp';
 
 export default function Home() {
 const  {categoryName} = useParams();
@@ -16,6 +17,7 @@ const  {categoryName} = useParams();
      <NewArrival/>
      <HighlightsContainer/>
       <BlogContainer/>
+      <PopUp/>
     </>
   )
 }
