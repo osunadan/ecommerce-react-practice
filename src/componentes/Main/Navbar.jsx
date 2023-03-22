@@ -22,7 +22,7 @@ function  handleShow() {
             </div>
             <div className={`nav-list d-flex ${show ? 'show' : ''}`}>
                 <Link to="/">Home</Link>
-                <Link to="/">Shop</Link>
+                <Link to="/shop">Shop</Link>
                 <Link to="/">Pages</Link>
                 <Link to="/">About Us</Link>
                 <Link to="/">Lookups</Link>

@@ -1,27 +1,9 @@
-import {React, useState} from 'react';
+import {React} from 'react';
 import 'boxicons';
 import { Link } from "react-router-dom";
 
-function Item({image, title, price, oferta, blog, description, date, key, id}) {
-  const [showBlog, setShowBlog] = useState(blog)
+function Item({image, title, price, oferta, description, key, id}) {
   
-if(showBlog){
-    return(
-        <div className="col">
-            <Link to={`/detail/${id}`}>
-            <div className="top">
-                <img src={image} alt="" />
-            </div>
-            <div className="bottom">
-                <h3>{title}</h3>
-                <h4>{description}</h4>
-                <span>{date}</span>
-            </div>
-            </Link>
-        </div>
-    )
-}
-
     return (
     <div className={`product ${oferta}`} >
         <Link to={`/detail/${id}`}>
