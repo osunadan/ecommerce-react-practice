@@ -2,13 +2,18 @@ import React from 'react'
 
 export default function ItemDetail({title, image, precio}) {
   return (
-    <div className="row container">
-        <div className="col col-1 d-flex">
-            <img src={`${image}`} alt="" />
+    <div className="detail container">
+        <div className="left image-container">
+            <div className="main">
+            <img id="zoom" src={`${image}`} alt="Imagen del producto"/>
+            </div>
         </div>
-        <div className="col col-2 d-flex">
+
+        <div className="right">
+            <span>Home/T-shirt</span>
             <h2>{title}</h2>
-            <p>${precio}</p>
+            <div className="price">${precio}
+            </div>
         </div>
     </div>
   )
