@@ -1127,6 +1127,35 @@ gap: 3rem 0;
     margin-top: 10rem;
 }
 
+/* ========== Contador =========== */
+
+.contadorContainer .top{
+ display: inline-flex;
+ border: 1px solid #ccc;
+ margin: 1.5rem 0;
+}
+
+.contadorContainer .top .contadorItem:nth-child(1), .contadorItem:nth-child(3){
+    padding: 1.7rem 2rem;
+    color: var(--default-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.contadorContainer .top .contadorItem:nth-child(1){
+    border-right: 1px solid #ccc;
+}
+
+.contadorContainer .top .contadorItem:nth-child(3){
+    border-left: 1px solid #ccc;
+}
+
+.contadorContainer .top .contadorItem:nth-child(2){
+    padding: 1rem 2rem;
+    color: var(--default-color);
+    font-size: 1.7rem;
+}
+
 /* ========== Carrito Page =========== */
 
 .carritoTitles{
