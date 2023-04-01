@@ -2,26 +2,31 @@ import { useState, useEffect } from "react";
 
 export default function useProducts(categoryName) {
 const [productos, setProductos] = useState([]);
+const [productosFiltrados, setProductosFiltrados] = useState([]);
 
-const getProducts = async (categoryName) => {
+const getProducts = async () => {
   try {
     const results = await fetch("../src/mock/products.json");
     const data = await results.json();
     const products = data.products;
-    const productosFiltrados = products.filter((prod)=> prod.category === categoryName)
-    if(categoryName){
-    setProductos(productosFiltrados);
-    }else{
-    setProductos(products)}
+    setProductos(products);
   } catch (err) {
-    console.log(err);
+    console.log("Error");
   }
 };
 
+const filtro = (categoryName) => {
+setProductosFiltrados(productos.filter((prod)=> prod.category === categoryName))
+}
 
 useEffect(()=>{
-getProducts(categoryName);
-},[categoryName])
+getProducts()
+console.log(productos)
+},[])
 
-  return productos
+useEffect(()=>{
+filtro(categoryName);
+},[productos, categoryName])
+
+  return [productos, productosFiltrados];
 }

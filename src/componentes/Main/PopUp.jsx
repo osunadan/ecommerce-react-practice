@@ -35,7 +35,7 @@ useEffect(() => {
           <p>Sign up to our newsletter and save 30% for you next purchase. No spam, we promise!
           </p>
           <form action="#">
-            <input type="email" placeholder="Enter your email..." class="popup-form"/>
+            <input type="email" placeholder="Enter your email..." className="popup-form"/>
             <button className="btn" href="#">Subscribe</button>
           </form>
         </div>

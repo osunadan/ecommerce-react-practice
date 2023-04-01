@@ -5,7 +5,7 @@ import useProducts from '../../customHooks/useProducts';
 
 function CategoriasContainer() {
 const [cat, setCat] = useState([]);
-const productos = useProducts();
+const [productos, productosFiltrados] = useProducts();
 
 useEffect(() => {
     const categorias = productos.map((prod) => {
@@ -17,7 +17,7 @@ useEffect(() => {
 
     const categoríasSinDuplicados = removeDuplicates(categorias);
 			setCat(categoríasSinDuplicados);
-},[productos])
+}, [productos])
 
 
   return (

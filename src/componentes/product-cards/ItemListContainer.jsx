@@ -4,14 +4,14 @@ import TitleProductCards from './TitleProductCards';
 import useProducts from '../../customHooks/useProducts';
 
 function ItemListContainer({categoria}) {
-const productos = useProducts(categoria);
+const [productos, productosFiltrados] = useProducts(categoria);
 const productosOferta = productos.filter((prod) => prod.oferta === "true");
 
   return (
    <section className='section collection'>
     <TitleProductCards title={"COLLECTION"} subTitle={"Our Top Collection"}/>
     <CategoriasContainer/>
-    <ItemList productos={productos} productosOferta={productosOferta}/>
+    <ItemList categoria={categoria} productos={productos} productosFiltrados={productosFiltrados} productosOferta={productosOferta}/>
     </section>
   )
 }

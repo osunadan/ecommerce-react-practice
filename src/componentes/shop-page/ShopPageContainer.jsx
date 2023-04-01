@@ -6,8 +6,8 @@ import useProducts from '../../customHooks/useProducts';
 export default function ShopPageContainer() {
 const [selectedValue, setSelectedValue] = useState("");
 const [show, setShow] = useState(true)
-const [productosFiltrados, setProductosFiltrados] = useState([]);
-const productos = useProducts();
+const [productosCategorizados, setProductosCategorizados] = useState([]);
+const [productos, productosFiltrados] = useProducts();
 
   const handleSelectChange = (event) => {
     setSelectedValue(event.target.value);
@@ -18,7 +18,7 @@ const productos = useProducts();
   useEffect(() => {
     if(selectedValue === "Oferta"){
         const productosEnOferta = [...productos]
-        setProductosFiltrados(productosEnOferta.filter((prod) => prod.oferta === "true"));
+        setProductosCategorizados(productosEnOferta.filter((prod) => prod.oferta === "true"));
         console.log("Estoy mostrando los productos en oferta")
     }  if(selectedValue === "PrecioMenor"){
 
@@ -34,7 +34,7 @@ const productos = useProducts();
             } else {
                 return -1
             }})
-            setProductosFiltrados(parsedProducts);
+            setProductosCategorizados(parsedProducts);
             console.log("Estoy mostrando los productos de menor a mayor precio");
         } if(selectedValue === "PrecioMayor"){
         const parsedProducts = productos.map((product) => {
@@ -49,7 +49,7 @@ const productos = useProducts();
             } else {
                 return -1
             }})
-            setProductosFiltrados(parsedProducts);
+            setProductosCategorizados(parsedProducts);
             console.log("Estoy mostrando los productos de mayor a menor precio");
         } if(selectedValue === "Todos"){
             setShow(true);
@@ -75,7 +75,7 @@ const productos = useProducts();
         <div className="product-center container d-flex">
             {show ? productos.map((prod)=>{
                 return(<Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
-            )}) : productosFiltrados.map((prod)=>{
+            )}) : productosCategorizados.map((prod)=>{
                 return(<Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
             )})}
         </div>

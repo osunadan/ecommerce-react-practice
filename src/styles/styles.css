@@ -1105,6 +1105,10 @@ gap: 3rem 0;
 
 /* ========== Detail page=========== */
 
+.loading{
+    height: 100vh;
+}
+
 .product-detail .detail{
     display: grid;
     grid-auto-columns: 1fr;

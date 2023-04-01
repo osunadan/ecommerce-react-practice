@@ -6,16 +6,18 @@ import Item from "./Item";
 import TitleProductCards from './TitleProductCards';
 
 
-function ItemList({productos, productosOferta}) {
-const [productosPorPartes, setProductosPorPartes] = useState([]);
+function ItemList({productos, productosFiltrados, categoria, productosOferta}) {
+const [productosPorPartes, setProductosPorPartes] = useState(productos.filter((_, index) => index < 4));
 const [mostrarTodo, setMostrarTodo] = useState(false);
 
 useEffect(() => {
-    setProductosPorPartes(productos.filter((_, index) => index < 4));
-  }, [productos]);
+window.onload = function(){
+    setProductosPorPartes(productos.filter((_, index) => index < 4))
+}
+})
+
 
 console.log(productosPorPartes)
-
 const loadData = (e) =>{
     if (mostrarTodo){
         e.target.disabled = true;
@@ -28,11 +30,14 @@ const loadData = (e) =>{
     return (
       <div className="products container">
 <div className="container d-flex">
-        {mostrarTodo ? productos.map((prod)=>{
+        {mostrarTodo ? ( categoria ? productosFiltrados.map((prod)=>{
             return(
                 <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
-            ) 
-        }) : productosPorPartes.map((prod)=>{
+            )}) : productos.map((prod)=>{
+            return(
+                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
+            )}) )
+        : productosPorPartes.map((prod)=>{
             return(
                 <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}  id={prod.id}/>
             ) 
