@@ -11,7 +11,7 @@ const onAdd = (qty) => {
 
   return (
     <div className="detail container">
-        <div className="left image-container">
+        <div className="left image-container d-flex">
             <div className="main">
             <img id="zoom" src={productoElegido ? `${productoElegido.url}` : ""} alt=""/>
             </div>
@@ -20,7 +20,9 @@ const onAdd = (qty) => {
         <div className="right">
             <span>Home/T-shirt</span>
             <h2>{productoElegido ? productoElegido.title: ""}</h2>
-            <div className="price">${productoElegido ? productoElegido.price :"" }</div>
+            <p className="price">${productoElegido ? productoElegido.price :"" }</p>
+            <h3 className="titleDetail">Product detail</h3>
+            <p className="description">{productoElegido ? productoElegido.description : ""}</p>
             <Contador onAdd={onAdd} />
         </div>
     </div>

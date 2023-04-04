@@ -4,11 +4,14 @@ import 'boxicons';
 export default function Carrito() {
   return (
     <section className="section carrito">
-        <div className="row container">
-            <div className="titleCarrito">
+        <div className="col container">
+            <div className="top">
+                <div className="titleCarrito">
                 <h2>Tu carrito</h2>
                 <p>Total: $500</p>
             </div>
+        </div>
+        <div className="row">
         <div className="carritoTitles">
             <h3>Product</h3>
             <h3>Titulo</h3>
@@ -38,6 +41,9 @@ export default function Carrito() {
             </div>
             <button className="btn">Ir a pagar</button>
         </div>
+        </div>
+        <div className="row">
+            </div>
         </div>
     </section>
   )

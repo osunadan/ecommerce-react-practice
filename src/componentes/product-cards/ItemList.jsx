@@ -65,8 +65,12 @@ const loadData = (e) =>{
                     slidesPerView:2
                 },
                 996: {
-                    spaceBetween:1,
-                    slidesPerView:3
+                    spaceBetween: 1,
+                    slidesPerView:2
+                },
+                1920: {
+                    spaceBetween: 4,
+                    slidesPerView:4
                 }
             }
         }>
@@ -76,9 +80,7 @@ const loadData = (e) =>{
           <SwiperSlide key={`${prod.id}`}>
               <Item image={prod.url} title={prod.title} price={prod.price} oferta={"sale"}/>
           </SwiperSlide>)})}
-
       </Swiper>
-      
     </div>
   )
 }

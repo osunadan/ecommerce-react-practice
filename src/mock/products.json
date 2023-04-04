@@ -7,7 +7,8 @@
       "url": "../../src/assets/product-1.png",
       "category": "Dresses",
       "oferta": "true",
-      "stock": 7
+      "stock": 7,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget dictum dolor. Nullam non eleifend nibh."
     },
     {
       "id": 2,
@@ -16,7 +17,8 @@
       "url": "../../src/assets/product-2.png",
       "category": "Dresses",
       "oferta": "true",
-      "stock": 3
+      "stock": 3,
+      "description": "Donec venenatis, nisl eu accumsan dignissim, velit libero tincidunt mi, nec consectetur quam mi vel turpis."
     },
     {
       "id": 3,
@@ -25,7 +27,8 @@
       "url": "../../src/assets/product-3.png",
       "category": "Jewellery",
       "oferta": "true",
-      "stock": 10
+      "stock": 10,
+      "description": "Morbi suscipit, est id fringilla feugiat, nulla dolor vehicula ipsum, in aliquet nisi urna vel sapien."
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@
       "url": "../../src/assets/product-4.png",
       "category": "Jewellery",
       "oferta": "true",
-      "stock": 4
+      "stock": 4,
+      "description": "Nam dignissim, nisi vel dictum euismod, odio ex aliquam sapien, sed posuere libero ligula a quam."
     },
     {
       "id": 5,
@@ -43,7 +47,8 @@
       "url": "../../src/assets/product-5.png",
       "category": "Dresses",
        "oferta": "false",
-       "stock": 6
+       "stock": 6,
+       "description": "Suspendisse potenti. Nullam bibendum, lorem a luctus tristique, tellus ipsum vehicula turpis, id laoreet"
     },
     {
       "id": 6,
@@ -52,7 +57,8 @@
       "url": "../../src/assets/product-6.png",
       "category": "Accessories",
        "oferta": "false",
-       "stock": 2
+       "stock": 2,
+       "description": "Sed convallis, dolor vel bibendum malesuada, quam risus ornare enim, at consectetur velit lacus nec libero."
     },
     {
       "id": 7,
@@ -61,7 +67,8 @@
       "url": "../../src/assets/product-7.png",
       "category": "Footwear",
        "oferta": "false",
-       "stock": 10
+       "stock": 10,
+       "description": "Fusce non justo non tortor malesuada auctor. Aliquam sed magna metus. Donec rhoncus metus quis."
     },
     {
       "id": 8,
@@ -70,7 +77,8 @@
       "url": "../../src/assets/product-8.png",
       "category": "Footwear",
        "oferta": "false",
-       "stock": 1
+       "stock": 1,
+       "description": "Proin sed sodales odio. Praesent id orci quis augue rhoncus bibendum eu eget quam. Nullam."
     },
     {
       "id": 9,
@@ -79,7 +87,8 @@
       "url": "../../src/assets/product-9.png",
       "category": "Footwear",
        "oferta": "false",
-       "stock": 9
+       "stock": 9,
+       "description": "In nec purus in nisi egestas porta. Sed scelerisque ante sapien, id suscipit ex vehicula"
     },
     {
       "id": 10,
@@ -88,7 +97,8 @@
       "url": "../../src/assets/product-10.png",
       "category": "Accessories",
        "oferta": "false",
-       "stock": 5
+       "stock": 5,
+       "description": "Etiam sed risus tincidunt, tristique nisl vel, aliquet purus. In at nulla at eros blandit."
     },
     {
       "id": 11,
@@ -97,7 +107,8 @@
       "url": "../../src/assets/product-11.png",
       "category": "Accessories",
        "oferta": "false",
-       "stock": 8
+       "stock": 8,
+       "description": "Sed quis leo egestas, malesuada nunc ac, suscipit est. Vivamus ac magna eget neque egestas"
     },
     {
       "id": 12,
@@ -106,7 +117,8 @@
       "url": "../../src/assets/product-12.png",
       "category": "Accessories",
        "oferta": "false",
-       "stock": 5
+       "stock": 5,
+       "description": "In hac habitasse platea dictumst. Ut imperdiet, odio ut blandit consequat, ante magna aliquam ex."
     },
     {
       "id": 13,
@@ -115,7 +127,8 @@
       "url": "../../src/assets/product-13.png",
       "category": "Accessories",
        "oferta": "false",
-       "stock": 3
+       "stock": 3,
+       "description": "Maecenas euismod mi sed tellus malesuada, in suscipit arcu suscipit. Mauris consectetur erat ut."
     },
     {
       "id": 14,
@@ -124,7 +137,8 @@
       "url": "../../src/assets/product-14.png",
       "category": "Accessories",
        "oferta": "false",
-       "stock": 7
+       "stock": 7,
+       "description": "Phasellus eget porttitor augue. Sed mollis eleifend sapien, vel bibendum leo venenatis non. Praesent."
     },
     {
       "id": 15,
@@ -133,7 +147,8 @@
       "url": "../../src/assets/product-15.png",
       "category": "Accessories",
        "oferta": "false",
-       "stock": 2
+       "stock": 2,
+       "description": "Morbi euismod, augue vel suscipit sagittis, sapien sapien lacinia mi, et lobortis lorem tortor."
     },
     {
       "id": 16,
@@ -142,7 +157,8 @@
       "url": "../../src/assets/product-16.png",
       "category": "Accessories",
        "oferta": "false",
-       "stock": 6
+       "stock": 6,
+       "description": "Curabitur commodo magna enim, id feugiat est congue eu. Nullam aliquet, arcu id consectetur"
     }
 ]
 }
