@@ -6,12 +6,13 @@ import 'boxicons';
 
 const CartWidget = () => {
     const { cart, totalUnidades } = useContext(CartContext);
+    const cartCheckUp = cart.length === 0 ? "numberCart--Disable" : "numberCart--Active";
 
 	return (
 	<Link to={"/carrito"}>
         <div className="icon d-flex cartContainer">
             <box-icon classname="icon3" name='cart'></box-icon>
-            <p>1</p>
+            <p className={cartCheckUp}>{cart.length === 0 ? "" : totalUnidades()}</p>
 		</div>
       </Link>
 	);

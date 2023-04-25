@@ -2,23 +2,23 @@ import React from 'react';
 import 'boxicons';
 import Contador from "../products-detail/Contador"
 
-export default function ItemCarrito() {
+export default function ItemCarrito({image, title, total, borrarItem}) {
   return (
     <div className="carritoItems d-flex">
         <div className="col-1">
-            <img src="../../src/assets/product-1.png" alt="" />
+            <img src={image} alt="" />
         </div>
         <div className="col-2">
             <div className='top'>
-                <h3>Este es el titulo del producto</h3>
+                <h3>{title}</h3>
             </div>
             <div className="bottom d-flex">
             <Contador enCarrito={true}/>
-            <p className="price">$50</p>
+            <p className="price">${total}</p>
             </div>
         </div>
         <div className="col-3">
-        <box-icon name='x'></box-icon>
+        <box-icon name='x' onClick={borrarItem}></box-icon>
         </div>
         </div>
   )

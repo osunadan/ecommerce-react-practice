@@ -3,8 +3,8 @@ import { CartContext } from "../Context/CartContext";
 import Contador from "../products-detail/Contador"
 
 export default function ItemDetail({productoElegido}) {
-const { addToCart } = useContext(CartContext);
-console.log(productoElegido)
+const { addToCart, cantidadDeProducto } = useContext(CartContext);
+
 const onAdd = (qty) => {
 		addToCart(productoElegido, qty);
 	};
@@ -13,7 +13,7 @@ const onAdd = (qty) => {
     <div className="detail container">
         <div className="left image-container d-flex">
             <div className="main">
-            <img id="zoom" src={productoElegido ? `${productoElegido.url}` : ""} alt=""/>
+            <img src={productoElegido ? `${productoElegido.url}` : ""} alt=""/>
             </div>
         </div>
 

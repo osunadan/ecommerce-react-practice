@@ -46,7 +46,7 @@ const loadData = (e) =>{
 
 <div className="button d-flex">
         <button className="btn loadmore" onClick={(e)=> loadData(e)}>Load More</button>
-      </div>
+      </div>    
 
         <TitleProductCards title={"OFERTAS"} subTitle={"24h"}/>
       <Swiper id="main"
