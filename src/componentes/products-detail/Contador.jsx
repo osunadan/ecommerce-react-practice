@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Contador({initial = 1, onAdd, enCarrito}) {
+export default function Contador({initial=1, onAdd, enCarrito}) {
 const [cantidad, setCantidad] = useState(initial);
 
 const sumar = () => {

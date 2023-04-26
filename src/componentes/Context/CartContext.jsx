@@ -27,7 +27,7 @@ const addToCart = (producto, cantidad) => {
           cantidad,
         };
         return productoActualizado;
-      } else {
+      } else { 
         return prodDelCarrito;
       }
     });

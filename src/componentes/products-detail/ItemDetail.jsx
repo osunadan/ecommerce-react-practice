@@ -9,6 +9,10 @@ const onAdd = (qty) => {
 		addToCart(productoElegido, qty);
 	};
 
+  
+    const cantidad = productoElegido ? cantidadDeProducto(productoElegido.id) : 1;
+
+
   return (
     <div className="detail container">
         <div className="left image-container d-flex">
@@ -23,7 +27,7 @@ const onAdd = (qty) => {
             <p className="price">${productoElegido ? productoElegido.price :"" }</p>
             <h3 className="titleDetail">Product detail</h3>
             <p className="description">{productoElegido ? productoElegido.description : ""}</p>
-            <Contador onAdd={onAdd} />
+            <Contador onAdd={onAdd} initial={cantidad}/>
         </div>
     </div>
   )
