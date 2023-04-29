@@ -8,7 +8,8 @@
       "category": "Dresses",
       "oferta": "true",
       "stock": 7,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget dictum dolor. Nullam non eleifend nibh."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget dictum dolor. Nullam non eleifend nibh.",
+      "topCollection": true
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "category": "Dresses",
       "oferta": "true",
       "stock": 3,
-      "description": "Donec venenatis, nisl eu accumsan dignissim, velit libero tincidunt mi, nec consectetur quam mi vel turpis."
+      "description": "Donec venenatis, nisl eu accumsan dignissim, velit libero tincidunt mi, nec consectetur quam mi vel turpis.",
+      "topCollection": true
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "category": "Jewellery",
       "oferta": "true",
       "stock": 10,
-      "description": "Morbi suscipit, est id fringilla feugiat, nulla dolor vehicula ipsum, in aliquet nisi urna vel sapien."
+      "description": "Morbi suscipit, est id fringilla feugiat, nulla dolor vehicula ipsum, in aliquet nisi urna vel sapien.",
+      "topCollection": true
     },
     {
       "id": 4,
@@ -38,7 +41,8 @@
       "category": "Jewellery",
       "oferta": "true",
       "stock": 4,
-      "description": "Nam dignissim, nisi vel dictum euismod, odio ex aliquam sapien, sed posuere libero ligula a quam."
+      "description": "Nam dignissim, nisi vel dictum euismod, odio ex aliquam sapien, sed posuere libero ligula a quam.",
+      "topCollection": true
     },
     {
       "id": 5,
@@ -48,7 +52,8 @@
       "category": "Dresses",
        "oferta": "false",
        "stock": 6,
-       "description": "Suspendisse potenti. Nullam bibendum, lorem a luctus tristique, tellus ipsum vehicula turpis, id laoreet"
+       "description": "Suspendisse potenti. Nullam bibendum, lorem a luctus tristique, tellus ipsum vehicula turpis, id laoreet",
+       "topCollection": false
     },
     {
       "id": 6,
@@ -58,7 +63,8 @@
       "category": "Accessories",
        "oferta": "false",
        "stock": 2,
-       "description": "Sed convallis, dolor vel bibendum malesuada, quam risus ornare enim, at consectetur velit lacus nec libero."
+       "description": "Sed convallis, dolor vel bibendum malesuada, quam risus ornare enim, at consectetur velit lacus nec libero.",
+       "topCollection": false
     },
     {
       "id": 7,
@@ -68,7 +74,8 @@
       "category": "Footwear",
        "oferta": "false",
        "stock": 10,
-       "description": "Fusce non justo non tortor malesuada auctor. Aliquam sed magna metus. Donec rhoncus metus quis."
+       "description": "Fusce non justo non tortor malesuada auctor. Aliquam sed magna metus. Donec rhoncus metus quis.",
+       "topCollection": true
     },
     {
       "id": 8,
@@ -78,7 +85,8 @@
       "category": "Footwear",
        "oferta": "false",
        "stock": 1,
-       "description": "Proin sed sodales odio. Praesent id orci quis augue rhoncus bibendum eu eget quam. Nullam."
+       "description": "Proin sed sodales odio. Praesent id orci quis augue rhoncus bibendum eu eget quam. Nullam.",
+       "topCollection": true
     },
     {
       "id": 9,
@@ -88,7 +96,8 @@
       "category": "Footwear",
        "oferta": "false",
        "stock": 9,
-       "description": "In nec purus in nisi egestas porta. Sed scelerisque ante sapien, id suscipit ex vehicula"
+       "description": "In nec purus in nisi egestas porta. Sed scelerisque ante sapien, id suscipit ex vehicula",
+       "topCollection": false
     },
     {
       "id": 10,
@@ -98,7 +107,8 @@
       "category": "Accessories",
        "oferta": "false",
        "stock": 5,
-       "description": "Etiam sed risus tincidunt, tristique nisl vel, aliquet purus. In at nulla at eros blandit."
+       "description": "Etiam sed risus tincidunt, tristique nisl vel, aliquet purus. In at nulla at eros blandit.",
+       "topCollection": true
     },
     {
       "id": 11,
@@ -108,7 +118,8 @@
       "category": "Accessories",
        "oferta": "false",
        "stock": 8,
-       "description": "Sed quis leo egestas, malesuada nunc ac, suscipit est. Vivamus ac magna eget neque egestas"
+       "description": "Sed quis leo egestas, malesuada nunc ac, suscipit est. Vivamus ac magna eget neque egestas",
+       "topCollection": false
     },
     {
       "id": 12,
@@ -118,7 +129,8 @@
       "category": "Accessories",
        "oferta": "false",
        "stock": 5,
-       "description": "In hac habitasse platea dictumst. Ut imperdiet, odio ut blandit consequat, ante magna aliquam ex."
+       "description": "In hac habitasse platea dictumst. Ut imperdiet, odio ut blandit consequat, ante magna aliquam ex.",
+       "topCollection": false
     },
     {
       "id": 13,
@@ -128,7 +140,8 @@
       "category": "Accessories",
        "oferta": "false",
        "stock": 3,
-       "description": "Maecenas euismod mi sed tellus malesuada, in suscipit arcu suscipit. Mauris consectetur erat ut."
+       "description": "Maecenas euismod mi sed tellus malesuada, in suscipit arcu suscipit. Mauris consectetur erat ut.",
+       "topCollection": true
     },
     {
       "id": 14,
@@ -138,7 +151,8 @@
       "category": "Accessories",
        "oferta": "false",
        "stock": 7,
-       "description": "Phasellus eget porttitor augue. Sed mollis eleifend sapien, vel bibendum leo venenatis non. Praesent."
+       "description": "Phasellus eget porttitor augue. Sed mollis eleifend sapien, vel bibendum leo venenatis non. Praesent.",
+       "topCollection": false
     },
     {
       "id": 15,
@@ -148,7 +162,8 @@
       "category": "Accessories",
        "oferta": "false",
        "stock": 2,
-       "description": "Morbi euismod, augue vel suscipit sagittis, sapien sapien lacinia mi, et lobortis lorem tortor."
+       "description": "Morbi euismod, augue vel suscipit sagittis, sapien sapien lacinia mi, et lobortis lorem tortor.",
+       "topCollection": false
     },
     {
       "id": 16,
@@ -158,7 +173,8 @@
       "category": "Accessories",
        "oferta": "false",
        "stock": 6,
-       "description": "Curabitur commodo magna enim, id feugiat est congue eu. Nullam aliquet, arcu id consectetur"
+       "description": "Curabitur commodo magna enim, id feugiat est congue eu. Nullam aliquet, arcu id consectetur",
+       "topCollection": true
     }
 ]
 }

@@ -21,7 +21,6 @@ setProductosFiltrados(productos.filter((prod)=> prod.category === categoryName))
 
 useEffect(()=>{
 getProducts()
-console.log(productos)
 },[])
 
 useEffect(()=>{
