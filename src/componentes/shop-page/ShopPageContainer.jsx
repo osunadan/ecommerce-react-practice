@@ -1,6 +1,7 @@
 import {React, useState, useEffect} from 'react';
 import Item from "../product-cards/Item";
 import useProducts from '../../customHooks/useProducts';
+import useProductsFb from "../../customHooks/useProductsFb";
 
 
 export default function ShopPageContainer() {
@@ -9,17 +10,19 @@ const [show, setShow] = useState(true)
 const [productosCategorizados, setProductosCategorizados] = useState([]);
 const [productos, productosFiltrados] = useProducts();
 
+const [productosFb] = useProductsFb();
+
+
   const handleSelectChange = (event) => {
     setSelectedValue(event.target.value);
     setShow(false);
-    console.log(selectedValue);
   };
 
   useEffect(() => {
     if(selectedValue === "Oferta"){
         const productosEnOferta = [...productos]
         setProductosCategorizados(productosEnOferta.filter((prod) => prod.oferta === "true"));
-        console.log("Estoy mostrando los productos en oferta")
+        
     }  if(selectedValue === "PrecioMenor"){
 
         const parsedProducts = productos.map((product) => {
@@ -35,7 +38,7 @@ const [productos, productosFiltrados] = useProducts();
                 return -1
             }})
             setProductosCategorizados(parsedProducts);
-            console.log("Estoy mostrando los productos de menor a mayor precio");
+            
         } if(selectedValue === "PrecioMayor"){
         const parsedProducts = productos.map((product) => {
             return {
@@ -50,10 +53,10 @@ const [productos, productosFiltrados] = useProducts();
                 return -1
             }})
             setProductosCategorizados(parsedProducts);
-            console.log("Estoy mostrando los productos de mayor a menor precio");
+            
         } if(selectedValue === "Todos"){
             setShow(true);
-            console.log("Estoy mostrando todos los productos")
+            
            }
     }, [selectedValue])
   
