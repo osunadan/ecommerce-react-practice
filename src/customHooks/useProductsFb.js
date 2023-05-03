@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { database } from "../services/firebaseConfig"
 
-export default function useProducts() {
+export default function useProductsFb(categoria) {
 const [productosFb, setProductosFb] = useState([]);
+
+console.log(categoria)
 
 useEffect(()=>{
 const collectionProducts = collection(database, "products");
 
-getDocs(collectionProducts)
+const productos = categoria ? query(collectionProducts, where("category", "==", categoria)) : collectionProducts;
+
+getDocs(productos)
     .then((res)=>{ 
         const productosTransformados = res.docs.map((prod)=>{
             return {
@@ -19,7 +23,7 @@ getDocs(collectionProducts)
         setProductosFb(productosTransformados)
     })
     .catch((error)=>{console.log("No se pudo bajar correctamente la data")})
-},[])
+},[categoria])
 
-  return [productosFb];
+  return productosFb;
 }

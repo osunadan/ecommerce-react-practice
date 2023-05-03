@@ -10,14 +10,14 @@ function ItemList({productos, productosFiltrados, categoria, productosOferta}) {
 const [productosPorPartes, setProductosPorPartes] = useState(productos.filter((_, index) => index < 4));
 const [mostrarTodo, setMostrarTodo] = useState(false);
 
+console.log(productosFiltrados)
+
 useEffect(() => {
 window.onload = function(){
     setProductosPorPartes(productos.filter((_, index) => index < 4))
 }
 })
 
-
-console.log(productosPorPartes)
 const loadData = (e) =>{
     if (mostrarTodo){
         e.target.disabled = true;
