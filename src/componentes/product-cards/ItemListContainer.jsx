@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import {getDocs, query, where} from "firebase/firestore";
-import CategoriasContainer from './CategoriasContainer'
+import CategoriasContainer from './CategoriasContainer';
 import ItemList from './ItemList'
 import TitleProductCards from './TitleProductCards';
-import useProducts from '../../customHooks/useProducts';
 import useProductsFb from '../../customHooks/useProductsFb';
 
-function ItemListContainer({categoria}) {
+function ItemListContainer() {
 const [topProducts, setTopProducts] = useState([])
-const [productos, productosFiltrados] = useProducts(categoria);
 const [productosFb, productosFbFiltrados, collectionProducts] = useProductsFb()
 
 useEffect(() => {
@@ -25,7 +23,7 @@ getDocs(q)
         setTopProducts(productosTransformados)
     })
     .catch((error)=>{console.log("No se pudo bajar correctamente la data")})
-}, [categoria])
+}, [])
 
 
 const productosOferta = productos.filter((prod) => prod.oferta === "true");

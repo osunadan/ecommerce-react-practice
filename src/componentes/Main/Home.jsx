@@ -13,7 +13,7 @@ const  {categoryName} = useParams();
   return (
     <>
      <Header/>
-     <ItemListContainer categoria={categoryName}/>
+     <ItemListContainer/>
      <NewArrival/>
      <HighlightsContainer/>
       <BlogContainer/>
