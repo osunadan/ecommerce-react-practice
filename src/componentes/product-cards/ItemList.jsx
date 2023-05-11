@@ -6,46 +6,16 @@ import Item from "./Item";
 import TitleProductCards from './TitleProductCards';
 
 
-function ItemList({productos, productosFiltrados, categoria, productosOferta}) {
-const [productosPorPartes, setProductosPorPartes] = useState(productos.filter((_, index) => index < 4));
-const [mostrarTodo, setMostrarTodo] = useState(false);
-
-
-useEffect(() => {
-window.onload = function(){
-    setProductosPorPartes(productos.filter((_, index) => index < 4))
-}
-})
-
-const loadData = (e) =>{
-    if (mostrarTodo){
-        e.target.disabled = true;
-        e.target.innerHTML = "No more products";
-        return;
-    }
-    setMostrarTodo(true);
-    }
+function ItemList({productos, productosOferta}) {
 
     return (
       <div className="products container">
 <div className="container d-flex">
-        {mostrarTodo ? ( categoria ? productosFiltrados.map((prod)=>{
-            return(
-                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
-            )}) : productos.map((prod)=>{
-            return(
-                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
-            )}) )
-        : productosPorPartes.map((prod)=>{
-            return(
-                <Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price}  id={prod.id}/>
-            ) 
-        }) }
+        {productos.map((prod)=>{
+          return(
+              <Item image={prod.url} title={prod.title} price={prod.price} />
+          )})}
 </div>
-
-<div className="button d-flex">
-        <button className="btn loadmore" onClick={(e)=> loadData(e)}>Load More</button>
-      </div>    
 
         <TitleProductCards title={"OFERTAS"} subTitle={"24h"}/>
       <Swiper id="main"
