@@ -2,6 +2,7 @@ import {React, useState, useEffect} from 'react';
 import Item from "../product-cards/Item";
 import useProducts from '../../customHooks/useProducts';
 import useProductsFb from "../../customHooks/useProductsFb";
+import CategoriasContainer from '../product-cards/CategoriasContainer'
 
 
 export default function ShopPageContainer() {
@@ -73,6 +74,10 @@ const [productosFb] = useProductsFb();
                     <option value="Oferta">En oferta</option>
                 </select>
             </form>
+        </div>
+
+        <div className='container collection'>
+            <CategoriasContainer/>
         </div>
 
         <div className="product-center container d-flex">
