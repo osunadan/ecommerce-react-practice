@@ -7,6 +7,8 @@ import Navbar from "./componentes/Main/Navbar";
 import Home from "./componentes/Main/Home"
 import Carrito from "./componentes/Checkout/Carrito";
 import ShopPageContainer from "./componentes/shop-page/ShopPageContainer";
+import Checkout from "./componentes/Checkout/Checkout";
+
 
 function App() {
   return (
@@ -15,10 +17,11 @@ function App() {
           <Navbar/>
       <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/category/:categoryName" element={<Home/>} />
+          <Route path="/category/:categoryName" element={<ShopPageContainer/>} />
           <Route path="/detail/:detalleid" element={<ItemDetailContainer/>} />
           <Route path="/carrito" element={<Carrito/>} />
           <Route path="/shop" element={<ShopPageContainer/>} />
+          <Route path="/checkout" element={<Checkout/>} />
       </Routes>
       </Provider>
       <FooterContainer/>

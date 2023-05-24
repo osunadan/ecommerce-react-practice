@@ -4,6 +4,8 @@ export const CartContext = createContext();
 
 const Provider = (props) => {
     const [cart, setCart] = useState([]);
+    const [numeroDeOrden, setNumeroDeOrden] = useState("");
+
 console.log(cart)
 
 const addToCart = (producto, cantidad) => {
@@ -62,8 +64,12 @@ const addToCart = (producto, cantidad) => {
     setCart([...copyCart]);
   };
 
+  const orderId = (id) => {
+    setNumeroDeOrden(id)
+  }
+
     return(
-		<CartContext.Provider value={{cart, addToCart, cantidadDeProducto, totalUnidades, totalPrecioUnidad, deleteCart, deleteItem}}>
+		<CartContext.Provider value={{cart, addToCart, cantidadDeProducto, totalUnidades, totalPrecioUnidad, deleteCart, deleteItem, orderId, numeroDeOrden}}>
             {props.children}
         </CartContext.Provider>
 	)

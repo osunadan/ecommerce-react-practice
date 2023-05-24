@@ -13,7 +13,7 @@ function ItemList({productos, productosOferta}) {
 <div className="container d-flex">
         {productos.map((prod)=>{
           return(
-              <Item image={prod.url} title={prod.title} price={prod.price} />
+              <Item image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
           )})}
 </div>
 

@@ -1,20 +1,24 @@
 import {React, useContext, useState} from 'react';
 import { CartContext } from "../../componentes/Context/CartContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import 'boxicons';
 import ItemCarrito from './ItemCarrito';
+import {addDoc, collection, serverTimestamp} from 'firebase/firestore';
+import {database} from "../../services/firebaseConfig"
 
 export default function Carrito() {
-const { cart, totalPrecioUnidad, deleteCart, deleteItem } = useContext(CartContext);
+const { cart, totalPrecioUnidad, deleteCart, deleteItem, orderId } = useContext(CartContext);
+
+const totalCarrito = totalPrecioUnidad();
+
+const navigate = useNavigate();
 
     const [name, setName] = useState("");
-    console.log(name)
 	const [lastName, setLastName] = useState("");
 	const [adress, setAdress] = useState("");
 	const [email1, setEmail1] = useState("");
 	const [email2, setEmail2] = useState("");
 	const [telefono, setTelefono] = useState("");
-	const [orderId, setOrderId] = useState(undefined);
 	const [err, setErr] = useState("");
 
     const handleName = (e) => setName(e.target.value);
@@ -27,7 +31,26 @@ const { cart, totalPrecioUnidad, deleteCart, deleteItem } = useContext(CartConte
     const enviarDatos = (e) => {
 		e.preventDefault();
 		if (email1 === email2 && name !== "" && lastName !== "" && adress !== "" && telefono !== "") {
-		} else {
+		
+        const objOrden = {
+            buyer: {
+                name, lastName, telefono, adress, email1},
+            items: cart,
+            total: totalCarrito,
+            date: serverTimestamp(),
+            }
+
+            const orderCollection = collection(database, "orders");
+
+            addDoc(orderCollection, objOrden)
+            .then((res)=>{console.log("Envio satisfactorio", res);
+               orderId(res.id);
+            })
+            .catch((error)=>{console.log("Hubo un error", error)})
+
+            deleteCart()
+            navigate("/checkout")
+        } else {
 			setErr("Por favor llena correctamente los campos");
 		}
 	};
@@ -37,10 +60,10 @@ if (cart.length === 0)
             <section className="carritoVacioContainer section d-flex">
             <div className=" row container">
 			<h3 className="mensajeCarritoVacio">
-				Aun no has agregado productos al carrito, te invitamos a <Link to="/shop" className='shopEnlace'> la pagina de shop </Link> para que selecciones alguno de neustros productos
+				Aun no has agregado productos al carrito, te invitamos a <Link to="/shop" className='shopEnlace'> la pagina de shop </Link> para que selecciones alguno de nuestros productos
 			</h3>
             </div>
-            </section >
+            </section>
 		);
 
   return (

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useParams } from "react-router-dom";
 import Header from "../Main/Header";
 import ItemListContainer from "../product-cards/ItemListContainer";
 import NewArrival from "../secundary-sections/NewArrival";
@@ -8,12 +7,11 @@ import BlogContainer from "../blog/BlogContainer";
 import PopUp from './PopUp';
 
 export default function Home() {
-const  {categoryName} = useParams();
 
   return (
     <>
      <Header/>
-     <ItemListContainer/>
+     <ItemListContainer />
      <NewArrival/>
      <HighlightsContainer/>
       <BlogContainer/>
