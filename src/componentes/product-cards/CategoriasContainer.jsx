@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import Categorias from './Categorias';
-import useProducts from '../../customHooks/useProducts';
+import useProductsFb from '../../customHooks/useProductsFb';
 
 function CategoriasContainer() {
 const [cat, setCat] = useState([]);
-const [productos, productosFiltrados] = useProducts();
+const [productosFb, productosFbFiltrados, collectionProducts] = useProductsFb();
 
 useEffect(() => {
-    const categorias = productos.map((prod) => {
+    const categorias = productosFb.map((prod) => {
 				return prod.category;
 			});
 
@@ -17,8 +17,7 @@ useEffect(() => {
 
     const categoríasSinDuplicados = removeDuplicates(categorias);
 			setCat(categoríasSinDuplicados);
-}, [productos])
-
+}, [productosFb])
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { React, useState, useEffect} from 'react'
+import { React} from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import {Navigation, Pagination} from "swiper";
 import 'swiper/css';
@@ -34,11 +34,11 @@ function ItemList({productos, productosOferta}) {
                     slidesPerView:2
                 },
                 996: {
-                    spaceBetween: 1,
+                    spaceBetween: 0,
                     slidesPerView:2
                 },
                 1920: {
-                    spaceBetween: 4,
+                    spaceBetween: 0,
                     slidesPerView:4
                 }
             }

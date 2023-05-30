@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { collection, getDocs, query, where, orderBy, limit } from "firebase/firestore";
+import { collection, getDocs, query, where} from "firebase/firestore";
 import { database } from "../services/firebaseConfig"
 
 export default function useProductsFb(categoria) {
@@ -25,6 +25,7 @@ getDocs(collectionProducts)
 useEffect(()=>{
 if (categoria) {
     const productosFiltrados = query(collectionProducts, where("category", "===", categoria));
+
     getDocs(productosFiltrados) 
     .then((res)=>{ 
         const productosTransformados = res.docs.map((prod)=>{
@@ -35,7 +36,7 @@ if (categoria) {
         });
         setProductosFbFiltrados(productosTransformados)
     })
-    .catch((error)=>{console.log("No se pudo bajar correctamente la data")})
+    .catch((error)=>{console.log("No se pudo bajar correctamente la data", error)})
 }
 
 }, [categoria])

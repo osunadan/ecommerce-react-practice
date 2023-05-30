@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -9,7 +10,9 @@ function Header() {
                 <span className='subtitle'>Limited Time Only For Winter</span>
                 <h1>S<span className="i">i</span>ete</h1>
                 <p>LOOK YOUR BEST ON YOUR BEST DAY</p>
+                <Link to={"/shop"}>
                 <button className="btn">Explore Now</button>
+                </Link>
             </div>
             <img src="../../src/assets/woman-in-cart.png" alt="Woman in cart" />
         </div>

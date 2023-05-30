@@ -1,66 +1,96 @@
 import {React, useState, useEffect} from 'react';
-import Item from "../product-cards/Item";
-import useProducts from '../../customHooks/useProducts';
-import useProductsFb from "../../customHooks/useProductsFb";
-import CategoriasContainer from '../product-cards/CategoriasContainer'
+// import useProductsFb from "../../customHooks/useProductsFb";
+import CategoriasContainer from '../product-cards/CategoriasContainer';
+import {useParams} from 'react-router-dom';
+import {collection, getDocs, query, where} from "firebase/firestore";
+import {database} from "../../services/firebaseConfig"
 
 
 export default function ShopPageContainer() {
 const [selectedValue, setSelectedValue] = useState("");
-const [show, setShow] = useState(true)
+const [show, setShow] = useState(true);
 const [productosCategorizados, setProductosCategorizados] = useState([]);
-const [productos, productosFiltrados] = useProducts();
-
-const [productosFb] = useProductsFb();
-
+const {categoryName} = useParams();
+// const [productosFb, productosFbFiltrados, collectionProducts] = useProductsFb();
+const collectionProducts = collection(database, "products");
 
   const handleSelectChange = (event) => {
     setSelectedValue(event.target.value);
     setShow(false);
   };
 
-  useEffect(() => {
-    if(selectedValue === "Oferta"){
-        const productosEnOferta = [...productos]
-        setProductosCategorizados(productosEnOferta.filter((prod) => prod.oferta === "true"));
-        
-    }  if(selectedValue === "PrecioMenor"){
 
-        const parsedProducts = productos.map((product) => {
+  useEffect(() => {
+const productosFiltradosNavBar = {
+    Tech: query(collectionProducts, where("category", "==", "Tech")),
+    Accessories: query(collectionProducts, where("category", "==", "Accessories")),
+    Shoes: query(collectionProducts, where("category", "==", "Shoes")),
+    Clothes: query(collectionProducts, where("category", "==", "Clothes"))
+};
+
+const productosFiltradosForm = {
+    Oferta: query(collectionProducts, where("oferta", "==", "true")),
+};
+
+const refNavbar = categoryName ? productosFiltradosNavBar[categoryName || selectedValue] : collectionProducts;
+
+const refForm = selectedValue ? productosFiltradosForm[selectedValue] : collectionProducts;
+
+    getDocs(categoryName ? refNavbar : selectedValue ? refForm : collectionProducts)
+    .then((res)=>{ 
+        const productosTransformados = res.docs.map((prod)=>{
             return {
-                ...product,
-                    price: parseInt(product.price)
+                id: prod.id,
+                ...prod.data()
             }
-            });
-        parsedProducts.sort((first, second) =>{
-            if (first.price > second.price){
-                 return 1
-            } else {
-                return -1
-            }})
-            setProductosCategorizados(parsedProducts);
+        });
+        setProductosCategorizados(productosTransformados);
+         }).catch((error)=>{console.log("No se pudo bajar correctamente la data " + error)})
+
+/* La solución esta en aplicar el codigo de abajo a lo que sea que este en el estado "productosCategorizados" 
+porque fb y los querys se encargan de bajar la data ya sea completa o categporizada pero termina en un 
+array con objetos, ya solo le aplicas la logica de abajo a ese array de objetos */
+
+    // if(selectedValue === "Oferta"){
+      //  const productosEnOferta = [...productosFb]
+      //  setProductosCategorizados(productosEnOferta.filter((prod) => prod.oferta === "true"));
+        //
+   // }  if(selectedValue === "PrecioMenor"){
+
+     //   const parsedProducts = productosFb.map((product) => {
+       //     return {
+         //       ...product,
+           //         price: parseInt(product.price)
+            //}
+       //     });
+      //  parsedProducts.sort((first, second) =>{
+       //     if (first.price > second.price){
+         //        return 1
+          //  } else {
+            //    return -1
+    //        }})
+           // setProductosCategorizados(parsedProducts);
             
-        } if(selectedValue === "PrecioMayor"){
-        const parsedProducts = productos.map((product) => {
-            return {
-                ...product,
-                    price: parseInt(product.price)
-            }
-            });
-                parsedProducts.sort((first, second) =>{
-            if (first.price < second.price){
-                 return 1
-            } else {
-                return -1
-            }})
-            setProductosCategorizados(parsedProducts);
-            
-        } if(selectedValue === "Todos"){
-            setShow(true);
-            
-           }
-    }, [selectedValue])
-  
+       // } if(selectedValue === "PrecioMayor"){
+       // const parsedProducts = productos.map((product) => {
+         //   return {
+//                ...product,
+  //                  price: parseInt(product.price)
+    //        }
+      //      });
+        //        parsedProducts.sort((first, second) =>{
+   //         if (first.price < second.price){
+     //            return 1
+       //     } else {
+         //       return -1
+           // }})
+    //        setProductosCategorizados(parsedProducts);
+      //      
+    //    } if(selectedValue === "Todos"){
+      //      setShow(true);
+        //    
+      //     } 
+    },[categoryName])
 
   return (
     <section className="section all-products">
@@ -81,12 +111,10 @@ const [productosFb] = useProductsFb();
         </div>
 
         <div className="product-center container d-flex">
-            {show ? productos.map((prod)=>{
-                return(<Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
-            )}) : productosCategorizados.map((prod)=>{
-                return(<Item key={`${prod.id}`} image={prod.url} title={prod.title} price={prod.price} id={prod.id}/>
-            )})}
-        </div>
+        
+           </div>
     </section>
   )
 }
+
+
