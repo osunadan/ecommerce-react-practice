@@ -9,9 +9,7 @@ const onAdd = (qty) => {
 		addToCart(productoElegido, qty);
 	};
 
-  
     const cantidad = productoElegido ? cantidadDeProducto(productoElegido.id) : 1;
-
 
   return (
     <div className="detail container">

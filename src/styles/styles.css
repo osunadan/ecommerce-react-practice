@@ -1455,12 +1455,13 @@ align-content: flex-start;
 
 .all-products .d-flex{
     flex-wrap: wrap;
-    justify-content: space-evenly;
-
+    justify-content: space-between;
+    margin-bottom: 4rem;
 }
 
-.all-products .d-flex{
-    justify-content: space-between;
+.all-products .product-center.d-flex{
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 4rem;
 }
 
@@ -1472,5 +1473,16 @@ align-content: flex-start;
     border: 1px solid #ccc;
     appearance: none;
     outline: none;
+}
+
+/* ========== Mi pedido Page=========== */
+
+.status-pedido .top.d-flex {
+    flex-direction: column;
+}
+
+.status-pedido .top .statusForm .d-flex {
+    flex-direction: column;
+    margin-top: 2rem;
 }
 

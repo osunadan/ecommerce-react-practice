@@ -8,6 +8,7 @@ import Home from "./componentes/Main/Home"
 import Carrito from "./componentes/Checkout/Carrito";
 import ShopPageContainer from "./componentes/shop-page/ShopPageContainer";
 import Checkout from "./componentes/Checkout/Checkout";
+import MiPedido from "../src/componentes/miPedido/MiPedido"
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/carrito" element={<Carrito/>} />
           <Route path="/shop" element={<ShopPageContainer/>} />
           <Route path="/checkout" element={<Checkout/>} />
+          <Route path="/statusPedido" element={<MiPedido/>} />
       </Routes>
       </Provider>
       <FooterContainer/>
