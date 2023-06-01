@@ -1,6 +1,5 @@
 import React from 'react';
 import 'boxicons';
-import Contador from "../products-detail/Contador"
 
 export default function ItemCarrito({image, title, total, borrarItem}) {
   return (
@@ -13,7 +12,6 @@ export default function ItemCarrito({image, title, total, borrarItem}) {
                 <h3>{title}</h3>
             </div>
             <div className="bottom d-flex">
-            <Contador enCarrito={true}/>
             <p className="price">${total}</p>
             </div>
         </div>

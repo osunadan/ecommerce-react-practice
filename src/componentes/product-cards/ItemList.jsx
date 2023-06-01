@@ -47,7 +47,7 @@ function ItemList({productos, productosOferta}) {
         {productosOferta.map((prod)=>{
           return(
           <SwiperSlide key={`${prod.id}`}>
-              <Item image={prod.url} title={prod.title} price={prod.price} oferta={"sale"}/>
+              <Item image={prod.url} title={prod.title} price={prod.price} oferta={"sale"} id={prod.id}/>
           </SwiperSlide>)})}
       </Swiper>
     </div>

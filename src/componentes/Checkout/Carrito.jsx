@@ -37,6 +37,7 @@ const navigate = useNavigate();
                 name, lastName, telefono, adress, email1},
             items: cart,
             total: totalCarrito,
+            status: "Pedido recibido. Faltan 3 días para su envío",
             date: serverTimestamp(),
             }
 
@@ -125,9 +126,9 @@ if (cart.length === 0)
             <h3>Tus productos</h3>
             <span onClick={deleteCart} className='d-flex'><box-icon name='trash-alt'></box-icon>Vaciar carrito</span>  
             </div>
-            {cart.map((prod)=>{
+            {cart.map((prod, index)=>{
                 return(
-                    <ItemCarrito key={`${prod.id}`} image={prod.url} title={prod.title} total={prod.price * prod.cantidad} borrarItem={()=>deleteItem()}/>
+                    <ItemCarrito key={`${prod.id}`} image={prod.url} title={prod.title} total={prod.price * prod.cantidad} borrarItem={()=>deleteItem(index)}/>
                 )
             })}
         <div className="total--Container">

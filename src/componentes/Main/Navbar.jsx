@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import 'boxicons'
+import 'boxicons';
 import CartWidget from '../Checkout/CartWidget';
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ function  handleShow() {
             <div className={`nav-list d-flex ${show ? 'show' : ''}`}>
                 <Link to="/">Home</Link>
                 <Link to="/shop">Shop</Link>
-                <Link to="/">Mi pedido</Link>
+                <Link to="/statusPedido">Mi pedido</Link>
                 <div className="close" onClick={()=>{setShow(false)}}>
                     <box-icon name='x'></box-icon>
                 </div>

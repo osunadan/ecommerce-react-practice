@@ -1479,10 +1479,62 @@ align-content: flex-start;
 
 .status-pedido .top.d-flex {
     flex-direction: column;
+    background-color: var(--grey-color);
+    border-radius: 1.5rem;
+    width: 60vw;
 }
 
 .status-pedido .top .statusForm .d-flex {
     flex-direction: column;
+    margin: 3rem 0;
+    width: 20vw;
+}
+
+.status-pedido .top h2{
+    width: 55%;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.status-pedido .top .statusForm .input-default{
+    background-color: var(--white-color);
+    border-radius: 0.5rem;
+    color: var(--default-color);
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.status-pedido .top h3{
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 1rem;
+    background-color: var(--white-color);
+}
+
+
+.status-pedido .top .statusForm .btn{
     margin-top: 2rem;
 }
 
+@media only screen and (min-width: 768px) and (min-height: 945px) {
+  .status-pedido{
+      height: 50vh;
+  }
+}
+
+@media (max-width: 768px){
+    .status-pedido .top.d-flex {
+    width: 90vw;
+}
+
+.status-pedido .top h2{
+    width: 90%;
+}
+
+.status-pedido .top .statusForm .d-flex {
+    flex-direction: column;
+    margin: 3rem 0;
+    width: 70vw;
+}
+}

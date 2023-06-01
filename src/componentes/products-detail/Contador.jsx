@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Contador({initial=1, onAdd, enCarrito}) {
+export default function Contador({initial=1, onAdd}) {
 const [cantidad, setCantidad] = useState(initial);
 
 const sumar = () => {
@@ -26,9 +26,9 @@ const agregar = () => {
 		<p className="contadorItem">{cantidad}</p>
 	    <button className="contadorItem" onClick={restar}>-</button>
     </div>
-    {enCarrito ? <span></span> : <div className="bottom">
+    <div className="bottom">
 		<button onClick={agregar} className="botonAgregar btn">Agregar al carrito</button>
-	</div>}
+	</div>
     </div>
   )
 }
