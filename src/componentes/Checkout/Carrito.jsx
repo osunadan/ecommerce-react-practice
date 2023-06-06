@@ -74,7 +74,7 @@ if (cart.length === 0)
                 <h2>Tu carrito</h2>
         </div>
         <div className="col-1 checkout">
-            <div>
+            <div className='d-flex'>
             <h3 className="checkout-heading">Detalles para el envío</h3>
             <p className='mensajeError'>{err}</p>
             </div>

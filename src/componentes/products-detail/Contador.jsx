@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function Contador({initial=1, onAdd}) {
+export default function Contador({initial=1, onAdd, stock}) {
 const [cantidad, setCantidad] = useState(initial);
 
 const sumar = () => {
-	if (cantidad) {
+	if (cantidad <= stock) {
 			setCantidad(cantidad + 1);
 	}
 	};

@@ -16,7 +16,7 @@ export default function FooterContainer() {
                     <FooterIcon icon={<box-icon name='youtube' type='logo'  color={"#f7f7f7"}></box-icon>}/>
                     <FooterIcon icon={<box-icon name='instagram' type='logo'  color={"#f7f7f7"}></box-icon>}/>
                 </div>
-                <p> Copyrights 2021 <br/>
+                <p> Copyrights 2023<br/>
                     @osuna_dan
                 </p>
             </div>

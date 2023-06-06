@@ -542,7 +542,7 @@ width: 90%;
 }
 
 .collection .products .product .top img, .section .product-center .product .top img{
-    height: 23rem;
+    height: 60%;
 }
 
 .collection .products .product .top .icon, .section .product-center .product .top .icon{
@@ -578,7 +578,7 @@ width: 90%;
 .collection .products .product .bottom h4, .section .product-center .product .bottom h4{
 font-size: 1.8rem;
 width: 85%;
-height: 5rem;
+height: 7rem;
 margin-bottom: 1.5rem;
 }
 
@@ -1394,9 +1394,7 @@ font-weight: 500;
 }
 
 .carritoVacioContainer .row .mensajeCarritoVacio .shopEnlace {
-   background-color: var(--primary-color);
-   color: white;
-   padding: 1rem 1rem;
+   color: var(--primary-color);
    margin-right: 4px;
    border-radius: 1rem;
 }
@@ -1456,7 +1454,6 @@ align-content: flex-start;
 .all-products .d-flex{
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 4rem;
 }
 
 .all-products .product-center.d-flex{
@@ -1473,6 +1470,10 @@ align-content: flex-start;
     border: 1px solid #ccc;
     appearance: none;
     outline: none;
+}
+
+.all-products .top form{
+    margin: 3rem 0;
 }
 
 /* ========== Mi pedido Page=========== */
@@ -1509,7 +1510,6 @@ align-content: flex-start;
     text-align: center;
     margin-top: 3rem;
     padding: 1rem 1rem;
-    background-color: var(--white-color);
 }
 
 
