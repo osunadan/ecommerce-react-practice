@@ -4,9 +4,6 @@ import {Link, useParams} from 'react-router-dom';
 function Categorias({ categorias }) {
 const [activeIndex, setActiveIndex] = useState(null);
 
-const {categoryName} = useParams();
-
-
 const handleClick = (index) => {
     setActiveIndex(index);
 }

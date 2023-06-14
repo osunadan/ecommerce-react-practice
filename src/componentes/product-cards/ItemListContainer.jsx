@@ -40,7 +40,6 @@ getDocs(q)
     })
 }, [])
 
-console.log(topProducts)
   return (
    <section className='section collection'>
     <TitleProductCards title={"COLLECTION"} subTitle={"Our Top Collection"}/>
