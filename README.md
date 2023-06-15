@@ -12,10 +12,6 @@ Al enviar tus datos te sale un mensaje donde se te proporciona el ID de tu compr
   
 Si no se han agregado productos al carrito y haces click en el icono del carrito, sale un mensaje invitandote a seleccionar algun producto. También hay una modalbox que se activa automaticamente para mostrar un descuento. Es responsive, así que se creo para que se pueda visualizar en mobile. 
   
-  
-  
-  
-  
 #### [En este enlace puedes ver la app en funcionamiento](https://daniel-osuna-45060.netlify.app/)
 
 ## Librerías utilizadas
