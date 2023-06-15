@@ -1,6 +1,6 @@
 # Bienvenidos a Siete Fashion Store
 
-## E-commerce creado como proyecto final del curso de React.js de Coderhouse
+## E-commerce creado como proyecto final del curso de React.js de Coderhouse. 
 
 Este proyecto sirve como tienda virtual para "Siete Fashion Store", una marca de ropa ficticia, a la cual se agregaron distintas funcionalidades con las que se pudieron aprovechar los recursos de React aprendidos durante el curso. Esta estructurado en 5 paginas o secciones. En el home, encontrarás una hero section con un CTA, también product cards con los productos principales y en oferta, ademas secciónes que sirven para mostrar los hightlights de la tienda. 
 
@@ -11,8 +11,11 @@ Al hacer click en dicho icono de carrito puedes ir a la pagina de checkout, dond
 Al enviar tus datos te sale un mensaje donde se te proporciona el ID de tu compra, el cual puede ingresar en la sección de "Mi pedido" que se encuentra en la navbar, donde al ingresar tu ID en el formulario, te dara el status de tu pedido. 
   
 Si no se han agregado productos al carrito y haces click en el icono del carrito, sale un mensaje invitandote a seleccionar algun producto. También hay una modalbox que se activa automaticamente para mostrar un descuento. Es responsive, así que se creo para que se pueda visualizar en mobile. 
-
-
+  
+  
+  
+  
+  
 #### [En este enlace puedes ver la app en funcionamiento](https://daniel-osuna-45060.netlify.app/)
 
 ## Librerías utilizadas
