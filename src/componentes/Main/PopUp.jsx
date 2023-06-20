@@ -26,7 +26,7 @@ useEffect(() => {
       </div>
       <div className="popup-left">
         <div className="popup-img-container">
-          <img className="popup-img" src="../../src/assets/blog-1.png" alt="popup"/>
+          <img className="popup-img" src="../assets/blog-1.png" alt="popup"/>
         </div>
       </div>
       <div className="popup-right">

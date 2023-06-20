@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import imgUrl from  '../../../src/assets/woman-in-cart.png';
 
 function Header() {
   return (
@@ -14,7 +15,7 @@ function Header() {
                 <button className="btn">Explore Now</button>
                 </Link>
             </div>
-            <img src="../../src/assets/woman-in-cart.png" alt="Woman in cart" />
+            <img src={imgUrl} alt="Woman in cart" />
         </div>
     </div>
     </header>

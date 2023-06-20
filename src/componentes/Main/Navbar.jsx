@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import 'boxicons';
 import CartWidget from '../Checkout/CartWidget';
+import imgUrl from  '../../../src/assets/Siete.svg';
 
 const Navbar = () => {
 const [show, setShow] = useState(false)
@@ -16,7 +17,7 @@ function  handleShow() {
         <div className='row container d-flex'>
             <div className="logo">
                 <Link to={"/"}>
-                <img  src="../../src/assets/Siete.svg" alt="Logo de la empresa" />
+                <img  src={imgUrl} alt="Logo de la empresa" />
                 </Link>
             </div>
             <div className={`nav-list d-flex ${show ? 'show' : ''}`}>
